@@ -1,0 +1,80 @@
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 0px;
+    scroll-behavior: smooth;
+    overflow: hidden;
+}
+
+#topbar{
+    position: fixed;
+    left: 0;
+    right: 0;
+    color: white;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 1);
+    z-index: 200;
+}
+
+#logo{
+    font-size: 30px;
+    line-height: 30px;
+    width: 20%;
+    text-align: center;
+    float: left;
+}
+
+#menu-wrapper{
+    margin-left: auto;
+    margin-right: 100px;;
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    min-width: 400px;
+}
+
+#content{
+    position: absolute;
+    top: 60;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.content-anchor{
+    padding-top: 60px;
+    height: 100%;
+    width: 100%;
+}
+
+.content-page{
+    text-align: justify;
+    margin: 2%;
+    width: 96%;
+    height: 92%;
+}
+
+.menu-button{
+    text-align: center;
+    width: 150px;
+    margin: auto;
+    float: left;
+    line-height: 60px;
+}
+
+.menu-button:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.noselect{
+    -webkit-touch-callout: none;
+      -webkit-user-select: none;
+       -khtml-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+}
+
+a{
+    color: inherit;
+    text-decoration: inherit;
+}
