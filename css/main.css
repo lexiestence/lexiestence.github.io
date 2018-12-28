@@ -5,6 +5,18 @@ body{
     overflow: hidden;
 }
 
+h1{
+    font-size: 30px;
+    line-height: 35px;
+    padding: 0;
+    margin: 3px;
+}
+
+a{
+    color: inherit;
+    text-decoration: inherit;
+}
+
 #topbar{
     position: fixed;
     left: 0;
@@ -23,6 +35,14 @@ body{
     float: left;
 }
 
+#logo:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+#logo:active{
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
 #menu-wrapper{
     margin-left: auto;
     margin-right: 100px;;
@@ -38,6 +58,10 @@ body{
     left: 0;
     right: 0;
     bottom: 0;
+}
+
+#sample-textbox{
+    transition: linear 0.05s;
 }
 
 .content-anchor{
@@ -65,6 +89,10 @@ body{
     background-color: rgba(255, 255, 255, 0.2);
 }
 
+.menu-button:active{
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
 .noselect{
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -74,7 +102,25 @@ body{
     user-select: none;
 }
 
-a{
-    color: inherit;
-    text-decoration: inherit;
+.blinking{
+    animation: blinkingText 1s infinite;
+}
+
+@keyframes blinkingText{
+    0%{ 
+        color: inherit;
+    }
+    50%{
+        color: transparent;
+    }
+    100%{
+        color: inherit;
+    }
+}
+
+input{
+    font-size: 18px;
+    border: none;
+    border-bottom: solid 1px black;
+    background-color: transparent;
 }
