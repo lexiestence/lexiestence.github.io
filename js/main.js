@@ -33,7 +33,7 @@ $(document).ready(function(){
             $("input").slideUp(150);
             $("h1").slideUp(150);
 
-            typeout("I have been waiting for you, "+$("#sample-textbox").val()+".", "output", "5000");
+            typeout("I have been waiting for you, "+$("#sample-textbox").val()+".", "output", "50");
         },
         "input": function(){
             $("#output").text("Hello " + $("#sample-textbox").val());
