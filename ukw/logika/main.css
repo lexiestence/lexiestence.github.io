@@ -1,6 +1,11 @@
 body{
     background-color: #ee0088
 }
+
+table{
+    text-align: center; 
+    margin: auto;
+}
 #container{
     font-family: 'Ubuntu', sans-serif;
     box-shadow: rgba(255,255,255,0.3) 0px 0px 10px 10px;

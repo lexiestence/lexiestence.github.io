@@ -8,6 +8,71 @@
     <div id="container">   
         <h1 style="text-align: center">Logika formalna</h1>
 
+        <h2>Funktory logiczne</h2>
+
+        <h3>Negacja ~p</h3>
+        <pre>
+         p ~p
+         1  0
+         0  1
+        </pre>
+
+        <h3>Koniunkcja p∧q</h3>
+        <pre>
+         p q p∧q
+         1 1  1
+         0 1  0
+         1 0  0
+         0 0  0
+        </pre>
+
+        <h3>Alternatywa</h3>
+
+        <h4>Zwykła p∨q</h4>
+        <pre>
+         p q p∨q
+         1 1  1
+         0 1  1
+         1 0  1
+         0 0  0
+        </pre>
+
+        <h4>Rozłączna p⊥q</h4>
+        <pre>
+         p q p⊥q
+         1 1  0
+         0 1  1
+         1 0  1
+         0 0  0
+        </pre>
+
+        <h3>Dysjunkcja p/q</h3>
+        <pre>
+         p q p/q
+         1 1  0
+         0 1  1
+         1 0  1
+         0 0  1
+        </pre>
+
+        <h3>Równoważność p≡q</h3>
+        <pre>
+         p q p≡q
+         1 1  1
+         0 1  0
+         1 0  0
+         1 1  1
+        </pre>
+
+        <h3>Implikacja p⇒q</h3>
+        <pre>
+         p q p⇒q
+         1 1  1
+         0 1  1
+         1 0  0
+         0 0  1
+        </pre>
+
         <h2>Równoważność alternatyw</h2>
         <p>Alternatywy są równe niezależnie od kolejności wyrażeń</p>
 
@@ -82,6 +147,32 @@
          0 011 1 10001
          0 110 1 01010
          1 000 1 10110
+        </pre>
+
+        <h2>Prawo sylogizmu hipotetycznego koniunkcyjnego</h2>
+        <pre>
+        [(p⇒q)∧(q⇒r)]⇒(p⇒r)
+          111  1 111  1 111
+          011  1 111  1 011
+          100  0 011  1 111
+          010  1 011  1 011
+          111  0 100  1 100
+          011  0 100  1 010
+          100  0 010  1 100
+          010  1 010  1 010
+        </pre>
+
+        <h2>Prawo sylogizmu hipotetycznego w postaci bezkoniunkcyjnej</h2>
+        <pre>
+        (p⇒r)⇒[(q⇒r)⇒(p⇒r)]
+         111  1  111 1  111
+         011  1  111 1  011
+         111  1  011 1  111
+         011  1  011 1  011
+         100  1  100 1  100
+         010  1  100 1  010
+         100  1  010 0  100
+         010  1  010 1  010
         </pre>
     </div>
 </body>
