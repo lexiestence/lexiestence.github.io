@@ -16,7 +16,8 @@
          <a href="#ponpon">Ponendo ponens</a><br>
          <a href="#prawaDM">Prawa de Morgana</a><br>   
          <a href="#sylo">Prawa sylogizmu</a><br>
-         <a href="#skrocona">Metoda skrócona</a>
+         <a href="#skrocona">Metoda skrócona</a><br>
+         <a href="#prawdalog">Prawda logiczna</a><br>
 
 
         </div>
@@ -236,8 +237,28 @@
              p⇒q
              11 0
             </pre>
-            
+
             <pre>
+            [(p⇒q)∧(q⇒r)]⇒(p⇒r)
+              111 1  110  0 100
+              
+              SPRZECZNOŚĆ - TAUTOLOGIA
+              p⇒r
+              110
+            </pre>
+
+            <pre>
+            (p⇒q)⇒[(q⇒r)⇒(p⇒r)]
+             111  0  110 0 10 0
+             SPRZECNOŚĆ - TAUTOLOGIA
+             q⇒r
+             110
+            </pre>
+
+            <a name="prawdalog"></a>
+            <h2>Prawda logiczna</h2>
+            Prawda logiczna to tyle, co podstawienie prawa logicznego.<br>
+            Wyrażenie W jest prawdą logiczną wtedy i tylko wtedy, gdy jest to podstawienie jakiegoś prawa logicznego.
         </div>
     </div>
 </body>

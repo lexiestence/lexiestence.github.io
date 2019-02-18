@@ -24,6 +24,7 @@ table{
     float: left;
     padding: 20px;
     width: 800px;
+    text-align: justify;
 }
 
 #container{
