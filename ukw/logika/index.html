@@ -30,6 +30,24 @@
          000 1 000
         </pre>
 
+        <h2>Modus tollendo tollens</h2>
+        <pre>
+        [(p⇒q)∧~q]⇒(~q)
+          111 001 1 01
+          011 001 1 01
+          110 110 1 10
+          010 110 1 10
+        </pre>
+
+        <h2>Modus tollendo ponens</h2>
+        <pre>
+         [(p∨q)∧(~p)]⇒q
+           111 0 01  11
+           011 1 10  11
+           110 0 01  10
+           000 0 10  10
+        </pre>
+
         <h2>Modus ponendo tollens</h2>
         <pre>
         [(p/q)∧p]⇒(~q)
@@ -48,12 +66,21 @@
           010 00  10
         </pre>
 
-        <h2>hurr durr</h2>
+        <h2>I prawo de Morgana</h2>
         <pre>
          ~(p∧q)≡(~p∨~q)
          0 111 1 01001
          1 001 1 10101
          1 100 1 01110
+         1 000 1 10110
+        </pre>
+
+        <h2>II prawo de Morgana</h2>
+        <pre>
+         ~(p∨q)≡(~p∧~q)
+         0 111 1 01001
+         0 011 1 10001
+         0 110 1 01010
          1 000 1 10110
         </pre>
     </div>
