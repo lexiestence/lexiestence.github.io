@@ -1,15 +1,32 @@
 body{
-    background-color: #ee0088
+    background-color: #ee0088;
+    scroll-behavior: smooth;
 }
 
 table{
     text-align: center; 
     margin: auto;
 }
-#container{
-    font-family: 'Ubuntu', sans-serif;
+
+#menu{
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    line-height: 25px;
+    padding: 10px;
+    float: left;
+    width: 200px;
+}
+
+#content{
     box-shadow: rgba(255,255,255,0.3) 0px 0px 10px 10px;
     background-color: rgba(255,255,255,0.3);
+    float: left;
+    width: 600px;
+}
+
+#container{
+    font-family: 'Ubuntu', sans-serif;
     margin: auto;
     margin-top: 20px;
     padding: 10px;
@@ -21,4 +38,13 @@ pre{
     white-space: pre;
     margin: 1em 0;
     letter-spacing: 2px;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+    transition: 0.2s;
+}
+a:hover{
+    color: #ccc
 }

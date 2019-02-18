@@ -5,174 +5,196 @@
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 </head>
 <body>
-    <div id="container">   
-        <h1 style="text-align: center">Logika formalna</h1>
+    <div id="container">
+        <div id=menu>
+         <a href="#funktory">Funtory logiczne</a><br>
+         <a href="#rowno-alt">Rownoważność alternatyw</a><br>    
+         <a href="#rowno-kon">Rownoważność koniunkcji</a><br>
+         <a href="#toltol">Tollendo tollens</a><br>
+         <a href="#tolpon">Tollendo ponens</a><br>
+         <a href="#pontol">Ponendo tollens</a><br>
+         <a href="#ponpon">Ponendo ponens</a><br>
+         <a href="#prawaDM">Prawa de Morgana</a><br>   
+         <a href="#sylo">Prawa sylogizmu</a><br>
 
-        <h2>Funktory logiczne</h2>
+        </div>
 
-        <h3>Negacja ~p</h3>
-        <pre>
-         p ~p
-         1  0
-         0  1
-        </pre>
+        <div id="content">
+            <h1 style="text-align: center">Logika formalna</h1>
+            <a name="funktory"></a>
+            <h2>Funktory logiczne</h2>
+            <h3>Negacja ~p</h3>
+            <pre>
+             p ~p
+             1  0
+             0  1
+            </pre>
+    
+            <h3>Koniunkcja p∧q</h3>
+            <pre>
+             p q p∧q
+             1 1  1
+             0 1  0
+             1 0  0
+             0 0  0
+            </pre>
+    
+            <h3>Alternatywa</h3>
+    
+            <h4>Zwykła p∨q</h4>
+            <pre>
+             p q p∨q
+             1 1  1
+             0 1  1
+             1 0  1
+             0 0  0
+            </pre>
+    
+            <h4>Rozłączna p⊥q</h4>
+            <pre>
+             p q p⊥q
+             1 1  0
+             0 1  1
+             1 0  1
+             0 0  0
+            </pre>
+    
+            <h3>Dysjunkcja p/q</h3>
+            <pre>
+             p q p/q
+             1 1  0
+             0 1  1
+             1 0  1
+             0 0  1
+            </pre>
+    
+            <h3>Równoważność p≡q</h3>
+            <pre>
+             p q p≡q
+             1 1  1
+             0 1  0
+             1 0  0
+             1 1  1
+            </pre>
+    
+            <h3>Implikacja p⇒q</h3>
+            <pre>
+             p q p⇒q
+             1 1  1
+             0 1  1
+             1 0  0
+             0 0  1
+            </pre>
 
-        <h3>Koniunkcja p∧q</h3>
-        <pre>
-         p q p∧q
-         1 1  1
-         0 1  0
-         1 0  0
-         0 0  0
-        </pre>
+            <a name="rowno-alt"></a>
+            <h2>Równoważność alternatyw</h2>
+            <p>Alternatywy są równe niezależnie od kolejności wyrażeń</p>
+    
+            <pre>
+            (p∨q)≡(q∨p)
+             111 1 111
+             011 1 110
+             110 1 011
+             000 1 000
+            </pre>
+            
+            <a name="rowno-kon"></a>
+            <h2>Rownoważność koniunkcji</h2>
+            <p>Koniunkcje są równe niezależnie od kolejności wyrażeń</p>
+    
+            <pre>
+            (p∧q)≡(q∧p)
+             111 1 111
+             001 1 100
+             100 1 001
+             000 1 000
+            </pre>
 
-        <h3>Alternatywa</h3>
-
-        <h4>Zwykła p∨q</h4>
-        <pre>
-         p q p∨q
-         1 1  1
-         0 1  1
-         1 0  1
-         0 0  0
-        </pre>
-
-        <h4>Rozłączna p⊥q</h4>
-        <pre>
-         p q p⊥q
-         1 1  0
-         0 1  1
-         1 0  1
-         0 0  0
-        </pre>
-
-        <h3>Dysjunkcja p/q</h3>
-        <pre>
-         p q p/q
-         1 1  0
-         0 1  1
-         1 0  1
-         0 0  1
-        </pre>
-
-        <h3>Równoważność p≡q</h3>
-        <pre>
-         p q p≡q
-         1 1  1
-         0 1  0
-         1 0  0
-         1 1  1
-        </pre>
-
-        <h3>Implikacja p⇒q</h3>
-        <pre>
-         p q p⇒q
-         1 1  1
-         0 1  1
-         1 0  0
-         0 0  1
-        </pre>
-
-        <h2>Równoważność alternatyw</h2>
-        <p>Alternatywy są równe niezależnie od kolejności wyrażeń</p>
-
-        <pre>
-        (p∨q)≡(q∨p)
-         111 1 111
-         011 1 110
-         110 1 011
-         000 1 000
-        </pre>
-
-        <h2>Rownoważność koniunkcji</h2>
-        <p>Koniunkcje są równe niezależnie od kolejności wyrażeń</p>
-
-        <pre>
-        (p∧q)≡(q∧p)
-         111 1 111
-         001 1 100
-         100 1 001
-         000 1 000
-        </pre>
-
-        <h2>Modus tollendo tollens</h2>
-        <pre>
-        [(p⇒q)∧~q]⇒(~q)
-          111 001 1 01
-          011 001 1 01
-          110 110 1 10
-          010 110 1 10
-        </pre>
-
-        <h2>Modus tollendo ponens</h2>
-        <pre>
-         [(p∨q)∧(~p)]⇒q
-           111 0 01  11
-           011 1 10  11
-           110 0 01  10
-           000 0 10  10
-        </pre>
-
-        <h2>Modus ponendo tollens</h2>
-        <pre>
-        [(p/q)∧p]⇒(~q)
-          101 01 1  01
-          011 00 1  01
-          110 11 1  10
-          010 00 1  10
-        </pre>
-
-        <h2>Modus ponendo ponens</h2>
-        <pre>
-        [(p⇒q)∧p]⇒q
-          111 11  11
-          011 00  11
-          100 00  00
-          010 00  10
-        </pre>
-
-        <h2>I prawo de Morgana</h2>
-        <pre>
-         ~(p∧q)≡(~p∨~q)
-         0 111 1 01001
-         1 001 1 10101
-         1 100 1 01110
-         1 000 1 10110
-        </pre>
-
-        <h2>II prawo de Morgana</h2>
-        <pre>
-         ~(p∨q)≡(~p∧~q)
-         0 111 1 01001
-         0 011 1 10001
-         0 110 1 01010
-         1 000 1 10110
-        </pre>
-
-        <h2>Prawo sylogizmu hipotetycznego koniunkcyjnego</h2>
-        <pre>
-        [(p⇒q)∧(q⇒r)]⇒(p⇒r)
-          111  1 111  1 111
-          011  1 111  1 011
-          100  0 011  1 111
-          010  1 011  1 011
-          111  0 100  1 100
-          011  0 100  1 010
-          100  0 010  1 100
-          010  1 010  1 010
-        </pre>
-
-        <h2>Prawo sylogizmu hipotetycznego w postaci bezkoniunkcyjnej</h2>
-        <pre>
-        (p⇒r)⇒[(q⇒r)⇒(p⇒r)]
-         111  1  111 1  111
-         011  1  111 1  011
-         111  1  011 1  111
-         011  1  011 1  011
-         100  1  100 1  100
-         010  1  100 1  010
-         100  1  010 0  100
-         010  1  010 1  010
-        </pre>
+            <a name="toltol"></a>
+            <h2>Modus tollendo tollens</h2>
+            <pre>
+            [(p⇒q)∧~q]⇒(~q)
+              111 001 1 01
+              011 001 1 01
+              110 110 1 10
+              010 110 1 10
+            </pre>
+    
+            <a name="tolpon"></a>
+            <h2>Modus tollendo ponens</h2>
+            <pre>
+             [(p∨q)∧(~p)]⇒q
+               111 0 01  11
+               011 1 10  11
+               110 0 01  10
+               000 0 10  10
+            </pre>
+    
+            <a name="pontol"></a>
+            <h2>Modus ponendo tollens</h2>
+            <pre>
+            [(p/q)∧p]⇒(~q)
+              101 01 1  01
+              011 00 1  01
+              110 11 1  10
+              010 00 1  10
+            </pre>
+    
+            <a name="ponpon"></a>
+            <h2>Modus ponendo ponens</h2>
+            <pre>
+            [(p⇒q)∧p]⇒q
+              111 11  11
+              011 00  11
+              100 00  00
+              010 00  10
+            </pre>
+    
+            <a name="prawaDM"></a>
+            <h2>I prawo de Morgana</h2>
+            <pre>
+             ~(p∧q)≡(~p∨~q)
+             0 111 1 01001
+             1 001 1 10101
+             1 100 1 01110
+             1 000 1 10110
+            </pre>
+    
+            <h2>II prawo de Morgana</h2>
+            <pre>
+             ~(p∨q)≡(~p∧~q)
+             0 111 1 01001
+             0 011 1 10001
+             0 110 1 01010
+             1 000 1 10110
+            </pre>
+    
+            <a name="sylo"></a>
+            <h2>Prawo sylogizmu hipotetycznego koniunkcyjnego</h2>
+            <pre>
+            [(p⇒q)∧(q⇒r)]⇒(p⇒r)
+              111  1 111  1 111
+              011  1 111  1 011
+              100  0 011  1 111
+              010  1 011  1 011
+              111  0 100  1 100
+              011  0 100  1 010
+              100  0 010  1 100
+              010  1 010  1 010
+            </pre>
+    
+            <h2>Prawo sylogizmu hipotetycznego w postaci bezkoniunkcyjnej</h2>
+            <pre>
+            (p⇒r)⇒[(q⇒r)⇒(p⇒r)]
+             111  1  111 1  111
+             011  1  111 1  011
+             111  1  011 1  111
+             011  1  011 1  011
+             100  1  100 1  100
+             010  1  100 1  010
+             100  1  010 0  100
+             010  1  010 1  010
+            </pre>
+        </div>
     </div>
 </body>
