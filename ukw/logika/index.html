@@ -16,6 +16,8 @@
          <a href="#ponpon">Ponendo ponens</a><br>
          <a href="#prawaDM">Prawa de Morgana</a><br>   
          <a href="#sylo">Prawa sylogizmu</a><br>
+         <a href="#skrocona">Metoda skrócona</a>
+
 
         </div>
 
@@ -113,10 +115,10 @@
             <a name="toltol"></a>
             <h2>Modus tollendo tollens</h2>
             <pre>
-            [(p⇒q)∧~q]⇒(~q)
+            [(p⇒q)∧~q]⇒(~p)
               111 001 1 01
-              011 001 1 01
-              110 110 1 10
+              011 001 1 10
+              110 110 1 01
               010 110 1 10
             </pre>
     
@@ -195,6 +197,47 @@
              100  1  010 0  100
              010  1  010 1  010
             </pre>
+
+            <a name="skrocona"></a>
+            <h2>Skrócone sprawdzanie tautologii</h2>
+            <pre>
+            (p∧q)⇒(p≡q)
+             111 0 101 
+             CBC A DBD
+
+             SPRZECZNOŚĆ - TAUTOLOGIA
+             p≡q
+             101
+            </pre>
+            <pre>
+            (p⇒q)⇒(p∨q)
+             010 0 000
+             DBD A CBC
+             BRAK SPRZECZNOŚCI - TO NIE TAUTOLOGIA
+            </pre>
+            <pre>
+            (p⇒q)⇒(~q⇒~p)
+             11 0 1 100 01
+             EB E A CDB CD
+
+             SPRZECZNOŚĆ - TAUTOLOGIA
+             p⇒q
+             11 0
+            </pre>
+
+            <pre>
+             <b>Modus ponendo ponens</b>
+
+             [(p⇒q)∧p]⇒q
+               11 0 11 00
+               ED E BC AB
+
+             SPRZECZNOŚĆ - TAUTOLOGIA
+             p⇒q
+             11 0
+            </pre>
+            
+            <pre>
         </div>
     </div>
 </body>
