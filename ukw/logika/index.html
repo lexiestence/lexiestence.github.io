@@ -1,0 +1,60 @@
+<head>
+    <title>Logika formalna</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+</head>
+<body>
+    <div id="container">   
+        <h1 style="text-align: center">Logika formalna</h1>
+
+        <h2>Równoważność alternatyw</h2>
+        <p>Alternatywy są równe niezależnie od kolejności wyrażeń</p>
+
+        <pre>
+        (p∨q)≡(q∨p)
+         111 1 111
+         011 1 110
+         110 1 011
+         000 1 000
+        </pre>
+
+        <h2>Rownoważność koniunkcji</h2>
+        <p>Koniunkcje są równe niezależnie od kolejności wyrażeń</p>
+
+        <pre>
+        (p∧q)≡(q∧p)
+         111 1 111
+         001 1 100
+         100 1 001
+         000 1 000
+        </pre>
+
+        <h2>Modus ponendo tollens</h2>
+        <pre>
+        [(p/q)∧p]⇒(~q)
+          101 01 1  01
+          011 00 1  01
+          110 11 1  10
+          010 00 1  10
+        </pre>
+
+        <h2>Modus ponendo ponens</h2>
+        <pre>
+        [(p⇒q)∧p]⇒q
+          111 11  11
+          011 00  11
+          100 00  00
+          010 00  10
+        </pre>
+
+        <h2>hurr durr</h2>
+        <pre>
+         ~(p∧q)≡(~p∨~q)
+         0 111 1 01001
+         1 001 1 10101
+         1 100 1 01110
+         1 000 1 10110
+        </pre>
+    </div>
+</body>
