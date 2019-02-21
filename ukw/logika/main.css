@@ -1,5 +1,5 @@
 body{
-    background-color: #ee0088;
+    background-color: #000;
     scroll-behavior: smooth;
 }
 
@@ -9,28 +9,38 @@ table{
 }
 
 #menu{
+    color:white;
     position: fixed;
     left: 20px;
     top: 20px;
-    line-height: 25px;
     padding: 10px;
     float: left;
     width: 200px;
 }
 
+.menu-button{
+    width: inherit;
+    line-height: 25px;
+    margin: 0px;
+    transition: 0.2s;
+    padding: 3px;
+    height: 25px;
+}
+.menu-button:hover{
+    background-color: rgba(255,255,255,0.1)
+}
+
 #content{
-    box-shadow: rgba(255,255,255,0.3) 0px 0px 10px 10px;
-    background-color: rgba(255,255,255,0.3);
+    background-color: #ee0088;
     float: left;
-    padding: 20px;
-    width: 800px;
+    padding: 1em;
+    width: 50em;
     text-align: justify;
 }
 
 #container{
     font-family: 'Ubuntu', sans-serif;
     margin: auto;
-    margin-top: 20px;
     padding: 20px;
     width: 800px;
 }
@@ -48,5 +58,5 @@ a{
     transition: 0.2s;
 }
 a:hover{
-    color: #ccc
+    color: #ee0088
 }
