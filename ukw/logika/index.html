@@ -5,28 +5,31 @@
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 </head>
 <body>
+    
+    <div id="titlebar">
+        Logika formalna
+    </div>  
+
     <div id="container">
         <div id=menu>
-         <a href="#funktory"><div class="menu-button">Funtory logiczne</div></a><br>
-         <a href="#rowno-alt"><div class="menu-button">Rownoważność alternatyw</div></a><br>    
-         <a href="#rowno-kon"><div class="menu-button">Rownoważność koniunkcji</div></a><br>
-         <a href="#toltol"><div class="menu-button">Tollendo tollens</div></a><br>
-         <a href="#tolpon"><div class="menu-button">Tollendo ponens</div></a><br>
-         <a href="#pontol"><div class="menu-button">Ponendo tollens</div></a><br>
-         <a href="#ponpon"><div class="menu-button">Ponendo ponens</div></a><br>
-         <a href="#prawaDM"><div class="menu-button">Prawa de Morgana</div></a><br>   
-         <a href="#sylo"><div class="menu-button">Prawa sylogizmu</div></a><br>
-         <a href="#skrocona"><div class="menu-button">Metoda skrócona</div></a><br>
-         <a href="#prawdalog"><div class="menu-button">Prawda logiczna</div></a><br>
-
-
+         <a href="#funktory"><div class="menu-button">Funtory logiczne</div></a>
+         <a href="#rowno-alt"><div class="menu-button">Rownoważność alternatyw</div></a>    
+         <a href="#rowno-kon"><div class="menu-button">Rownoważność koniunkcji</div></a>
+         <a href="#toltol"><div class="menu-button">Tollendo tollens</div></a>
+         <a href="#tolpon"><div class="menu-button">Tollendo ponens</div></a>
+         <a href="#pontol"><div class="menu-button">Ponendo tollens</div></a>
+         <a href="#ponpon"><div class="menu-button">Ponendo ponens</div></a>
+         <a href="#prawaDM"><div class="menu-button">Prawa de Morgana</div></a>   
+         <a href="#sylo"><div class="menu-button">Prawa sylogizmu</div></a>
+         <a href="#skrocona"><div class="menu-button">Metoda skrócona</div></a>
+         <a href="#prawdalog"><div class="menu-button">Prawda logiczna</div></a>
         </div>
 
         <div id="content">
-            <h1 style="text-align: center">Logika formalna</h1>
             <a name="funktory"></a>
             <h2>Funktory logiczne</h2>
             <h3>Negacja ~p</h3>
+            Negacja zamienia wartość zdania na przeciwną.
             <pre>
              p ~p
              1  0
@@ -34,6 +37,7 @@
             </pre>
     
             <h3>Koniunkcja p∧q</h3>
+            Koniunkcja jest prawdziwa wtedy, kiedy wszystkie jej zdania są prawdziwe.
             <pre>
              p q p∧q
              1 1  1
@@ -43,8 +47,9 @@
             </pre>
     
             <h3>Alternatywa</h3>
-    
+            
             <h4>Zwykła p∨q</h4>
+            Alternatywa zwykła jest prawdziwa wtedy, kiedy co najmniej jedno zdanie jest prawdziwy.
             <pre>
              p q p∨q
              1 1  1
@@ -54,6 +59,7 @@
             </pre>
     
             <h4>Rozłączna p⊥q</h4>
+            Alternatywa rozłączna jest prawdziwa wtedy, kiedy dokładnie jedno zdanie jest prawdziwy.
             <pre>
              p q p⊥q
              1 1  0
@@ -63,6 +69,7 @@
             </pre>
     
             <h3>Dysjunkcja p/q</h3>
+            Dysjunkcja jest prawdziwa wtedy, kiedy przynajmniej jedno zdanie jest fałszywy.
             <pre>
              p q p/q
              1 1  0
@@ -72,6 +79,7 @@
             </pre>
     
             <h3>Równoważność p≡q</h3>
+            Równoważność jest prawdziwa wtedy, kiedy obydwa zdania mają taką samą wartość
             <pre>
              p q p≡q
              1 1  1
@@ -81,6 +89,7 @@
             </pre>
     
             <h3>Implikacja p⇒q</h3>
+            Implikacja jest <b>fałszywa</b> wtedy, kiedy ze zdania prawdziwego wynika zdanie fałszywe.
             <pre>
              p q p⇒q
              1 1  1
@@ -89,9 +98,11 @@
              0 0  1
             </pre>
 
+            <hr>
+
             <a name="rowno-alt"></a>
             <h2>Równoważność alternatyw</h2>
-            <p>Alternatywy są równe niezależnie od kolejności wyrażeń</p>
+            <p>Alternatywy są równe, niezależnie od kolejności wyrażeń</p>
     
             <pre>
             (p∨q)≡(q∨p)
@@ -100,11 +111,12 @@
              110 1 011
              000 1 000
             </pre>
-            
+
+            <hr>
+
             <a name="rowno-kon"></a>
             <h2>Rownoważność koniunkcji</h2>
-            <p>Koniunkcje są równe niezależnie od kolejności wyrażeń</p>
-    
+            <p>Koniunkcje są równe, niezależnie od kolejności wyrażeń</p>
             <pre>
             (p∧q)≡(q∧p)
              111 1 111
@@ -112,6 +124,8 @@
              100 1 001
              000 1 000
             </pre>
+            
+            <hr>
 
             <a name="toltol"></a>
             <h2>Modus tollendo tollens</h2>
@@ -122,6 +136,8 @@
               110 110 1 01
               010 110 1 10
             </pre>
+            
+            <hr>
     
             <a name="tolpon"></a>
             <h2>Modus tollendo ponens</h2>
@@ -132,7 +148,9 @@
                110 0 01  10
                000 0 10  10
             </pre>
-    
+             
+            <hr>
+   
             <a name="pontol"></a>
             <h2>Modus ponendo tollens</h2>
             <pre>
@@ -142,6 +160,8 @@
               110 11 1  10
               010 00 1  10
             </pre>
+            
+            <hr>
     
             <a name="ponpon"></a>
             <h2>Modus ponendo ponens</h2>
@@ -152,6 +172,8 @@
               100 00  00
               010 00  10
             </pre>
+            
+            <hr>
     
             <a name="prawaDM"></a>
             <h2>I prawo de Morgana</h2>
@@ -171,6 +193,8 @@
              0 110 1 01010
              1 000 1 10110
             </pre>
+            
+            <hr>
     
             <a name="sylo"></a>
             <h2>Prawo sylogizmu hipotetycznego koniunkcyjnego</h2>
@@ -198,9 +222,12 @@
              100  1  010 0  100
              010  1  010 1  010
             </pre>
+            
+            <hr>
 
             <a name="skrocona"></a>
             <h2>Skrócone sprawdzanie tautologii</h2>
+            W celu szybkiego rozstrzygnięcia czy dany zapis jest tautologią można sprawdzić, czy możliwe jest uzyskanie wartości 0 bez żadnych sprzeczności.
             <pre>
             (p∧q)⇒(p≡q)
              111 0 101 
@@ -254,6 +281,8 @@
              q⇒r
              110
             </pre>
+            
+            <hr>
 
             <a name="prawdalog"></a>
             <h2>Prawda logiczna</h2>
@@ -270,11 +299,9 @@
              110
             </pre>
 
-            Jeżeli [(Bydgoszcz jest stolicą Polski to Polska posiada bazę na Marsie) i (Polska nie posiada bazy na Marsie)] to nie prawda, że Bydgoszcz jest stolicą Polski.
-            <pre>[(p⇒q)∧~p]∧~p</pre>
-            Modus tollendo tollens - prawda logiczna<br> <!-- fuck this shit i'm out-->
-            <iframe src="https://giphy.com/embed/1L5YuA6wpKkNO" width="190" height="180" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/amazing-crazy-1L5YuA6wpKkNO"></  a></p>            
-            
+            Jeżeli [(Jeżeli Bydgoszcz jest stolicą Polski to Polska posiada bazę na Marsie) i (Polska nie posiada bazy na Marsie)] to nie prawda, że Bydgoszcz jest stolicą Polski.
+            <pre>[(p⇒q)∧~q]∧~p</pre>
+            Modus tollendo tollens - prawda logiczna<br> <!-- fuck this shit i'm out-->   
         </div>
     </div>
 </body>

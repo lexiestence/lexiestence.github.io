@@ -1,6 +1,13 @@
+hr{
+    color: white;
+}
+
 body{
-    background-color: #000;
+    margin: 0px;
+    padding: 0px;
+    background-color: #3d0023;
     scroll-behavior: smooth;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 table{
@@ -8,22 +15,32 @@ table{
     margin: auto;
 }
 
+#titlebar{
+    background-color: black;
+    color: white;
+    width: 100%;
+    line-height: 90px;
+    height: 90px;
+    text-align: center;
+    font-size: 50px;
+}
+
 #menu{
     color:white;
     position: fixed;
-    left: 20px;
-    top: 20px;
-    padding: 10px;
+    left: 0px;
+    top: 90px;
     float: left;
-    width: 200px;
+    width: 250px;
 }
 
 .menu-button{
-    width: inherit;
+    width: 230;
     line-height: 25px;
     margin: 0px;
     transition: 0.2s;
     padding: 3px;
+    padding-left: 20px;
     height: 25px;
 }
 .menu-button:hover{
@@ -31,18 +48,18 @@ table{
 }
 
 #content{
-    background-color: #ee0088;
+    color: white;
+    background-color: #770043;
     float: left;
     padding: 1em;
-    width: 50em;
+    width: inherit;
+    padding: 20px;
     text-align: justify;
 }
 
 #container{
-    font-family: 'Ubuntu', sans-serif;
     margin: auto;
-    padding: 20px;
-    width: 800px;
+    width: 50em;
 }
 pre{
     display: block;
