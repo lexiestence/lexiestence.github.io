@@ -20,9 +20,11 @@
          <a href="#pontol"><div class="menu-button">Ponendo tollens</div></a>
          <a href="#ponpon"><div class="menu-button">Ponendo ponens</div></a>
          <a href="#prawaDM"><div class="menu-button">Prawa de Morgana</div></a>   
+         <a href="#prawotrans"><div class="menu-button">Prawo transpozycji</div></a>         
          <a href="#sylo"><div class="menu-button">Prawa sylogizmu</div></a>
          <a href="#skrocona"><div class="menu-button">Metoda skrócona</div></a>
          <a href="#prawdalog"><div class="menu-button">Prawda logiczna</div></a>
+         <a href="#wyniklog"><div class="menu-button">Wynikanie logiczne</div></a>
         </div>
 
         <div id="content">
@@ -195,7 +197,22 @@
             </pre>
             
             <hr>
-    
+            
+            <a name="prawotrans"></a>
+            <h2>Prawo transpozycji</h2>
+            (p⇒q)⇒(~q⇒~p)
+            <br><br>
+            <pre>
+Jeżeli (
+  jeżeli Bydgoszcz jest stolicą Polski, to Polska posiada kolonię na księżycu
+) 
+to (
+  jeżeli Polska nie posiada kolonii na księżycu to Bydgoszcz nie jest stolicą Polski
+).
+            </pre>
+
+            <hr>
+
             <a name="sylo"></a>
             <h2>Prawo sylogizmu hipotetycznego koniunkcyjnego</h2>
             <pre>
@@ -301,7 +318,19 @@
 
             Jeżeli [(Jeżeli Bydgoszcz jest stolicą Polski to Polska posiada bazę na Marsie) i (Polska nie posiada bazy na Marsie)] to nie prawda, że Bydgoszcz jest stolicą Polski.
             <pre>[(p⇒q)∧~q]∧~p</pre>
-            Modus tollendo tollens - prawda logiczna<br> <!-- fuck this shit i'm out-->   
-        </div>
+            Modus tollendo tollens - prawda logiczna<br> <!-- fuck this shit i'm out-->  
+            
+            <hr>
+
+            <a name="wyniklog"></a>
+            <h2>Wynikanie logiczne</h2>
+            Z Z<sub>1</sub> wynika wyrażenie Z<sub>2</sub> jeżeli wyrażenie Z<sub>1</sub>⇒Z<sub>2</sub> jest prawdą logiczną.
+            <br><br>
+            Ze zdań Z<sub>1</sub>, Z<sub>2</sub>, ..., Z<sub>n</sub> wynika logicznie zdanie Z<sub>n+1</sub> wtedy i tylko wtedy gdy implikacja której poprzednikiem są zdania Z<sub>1</sub>, Z<sub>2</sub>, ..., Z<sub>n</sub>, a następnikiem zdanie Zn+1 jest podstawieniem jakiegoś prawa logicznego
+            <br><br>
+            Przykład:<br>
+            p: temperatura wynosi -10°C<br>
+            q: woda zamarza
+          </div>
     </div>
 </body>
