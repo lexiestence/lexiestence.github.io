@@ -81,3 +81,17 @@ a{
 a:hover{
     color: #ee0088
 }
+
+table{
+    color: inherit;
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+}
+td{
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+    padding: 3px;
+    text-align: left;
+}

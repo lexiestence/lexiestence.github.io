@@ -354,6 +354,49 @@ to (
             <a name="wniolog"></a>
             <h2>Wnioskowanie logiczne</h2>
             Wnioskowanie to układ zdań, w którym na podstawie zdań (conajmniej 1) uznanych za prawdziwe uznaje się za prawdziwe jakieś inne zdanie. Zdania na podstawie których uznaje się inne nazywa się <i>przesłankami</i>, a zdanie uznane za prawdziwe na podstawie innych zdań to <i>wniosek</i>.
+            <br><br>
+            <table>
+                <tr>
+                  <td>P<sub>1</sub></td>
+                  <td>Zdałam 1 egzamin w sesji.</td>
+                </tr>
+                <tr>
+                  <td>P<sub>2</sub></td>
+                  <td>Zdałam 2 egzamin w sesji.</td>
+                </tr>
+                <tr><td>...</td><td></td></tr>
+                <tr>
+                  <td>P<sub>n</sub></td>
+                  <td>Zdałam n-ty egzamin w sesji</td>
+                </tr>
+                <tr>
+                  <td><b>W</b></td>
+                  <td>Zdam każdy egzamin w sesji.</td>
+                </tr>
+              </table>
+              <br><br>
+              <table>
+                  <tr>
+                    <td>P<sub>1</sub></td>
+                    <td>Nieprawda, że temperatura jest ujemna</td>
+                  </tr>
+                  <tr>
+                    <td>P<sub>2</sub></td>
+                    <td>Nieprawda, że woda zamarza</td>
+                  </tr>
+                  <tr>
+                    <td><b>W</b></td>
+                    <td>Nieprawda, że woda zamarza w nieujemnej temperaturze.</td>
+                  </tr>
+                </table>
+
+                <br><br>
+                Wnioskowanie dedukcyjne występuje wtedy, gdy wniosek wynika logicznie z przesłanek.
+                Schematom wnioskowań dedukcyjnych odpowiadają prawa logiczne o postaci implikacji.
+                Schematowi wnioskowania o postaci takiej jak w powyższych tabelach odpowiada formuła zdaniowa o postaci:<br>
+                (P<sub>1</sub>∧P<sub>2</sub>∧...∧P<sub>n</sub>)⇒W
+                Formułę zdaniową odpowiadającą danemu schematowi wnioskowania nazywamy zasadą wnioskowania.<br>
+                Zasada wnioskowania to formuła zdaniowa odpowiadająca schematowi wnioskowania.
           </div>
     </div>
 </body>
