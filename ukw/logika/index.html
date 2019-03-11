@@ -353,7 +353,7 @@ to (
 
             <a name="wniolog"></a>
             <h2>Wnioskowanie logiczne</h2>
-            Wnioskowanie to układ zdań, w którym na podstawie zdań (conajmniej 1) uznanych za prawdziwe uznaje się za prawdziwe jakieś inne zdanie. Zdania na podstawie których uznaje się inne nazywa się <i>przesłankami</i>, a zdanie uznane za prawdziwe na podstawie innych zdań to <i>wniosek</i>.
+            Wnioskowanie to układ zdań, w którym na podstawie zdań (co najmniej 1) uznanych za prawdziwe uznaje się za prawdziwe jakieś inne zdanie. Zdania na podstawie których uznaje się inne nazywa się <i>przesłankami</i>, a zdanie uznane za prawdziwe na podstawie innych zdań to <i>wniosek</i>.
             <br><br>
             <table>
                 <tr>
@@ -394,9 +394,60 @@ to (
                 Wnioskowanie dedukcyjne występuje wtedy, gdy wniosek wynika logicznie z przesłanek.
                 Schematom wnioskowań dedukcyjnych odpowiadają prawa logiczne o postaci implikacji.
                 Schematowi wnioskowania o postaci takiej jak w powyższych tabelach odpowiada formuła zdaniowa o postaci:<br>
-                (P<sub>1</sub>∧P<sub>2</sub>∧...∧P<sub>n</sub>)⇒W
-                Formułę zdaniową odpowiadającą danemu schematowi wnioskowania nazywamy zasadą wnioskowania.<br>
-                Zasada wnioskowania to formuła zdaniowa odpowiadająca schematowi wnioskowania.
-          </div>
+                <p class="center-text">(P<sub>1</sub>∧P<sub>2</sub>∧...∧P<sub>n</sub>)⇒W</p>
+                Formułę zdaniową odpowiadającą danemu schematowi wnioskowania nazywamy zasadą wnioskowania.
+                Zasada wnioskowania to formuła zdaniowa odpowiadająca schematowi wnioskowania. Wnioskowanie dedykcyjne cechuje się tym, że z prawdziwych przesłanek zawsze uzyskamy prawdziwy wniosek.
+                <br><br>
+                Przykład:<br><br>
+                P<sub>1</sub>: Warszawa jest stolicą Polski<br>
+                P<sub>2</sub>: Jeżeli temperatura jest ujemna to woda zamarza.<br>
+                W: Woda zamarza.<br><br>
+                <pre>
+                  [p∧(q⇒r)]⇒r
+                   11 01 0  00
+
+                   BRAK SPRZECZNOŚCI
+                </pre>
+                Powyższy przykład nie jest wnioskowaniem logicznym, ponieważ jego zasada wnioskowania nie jest prawem logicznym.<br><br>
+                Błąd materialny występuje wtedy, gdy przesłanka wnioskowania (co najmniej 1) jest fałszywa.<br>
+                Błąd formalny polega na tym, że ktoś wnioskuje wedłuk schematu zawodnego, niededukcyjnego, a uważa go za dedukcyjny.
+                <br><br>
+                Przykład błędu materialnego:<br><br>
+                <table>
+                  <tr>
+                    <td>P<sub>1</sub></td>
+                     <td>Jeżeli temperatura wynosi +5°C to woda zamarza</td>
+                  </tr>
+                  <tr>
+                    <td>P<sub>2</sub></td>
+                    <td>Temperatura wynosi +5°C</td>
+                   </tr>
+                  <tr>
+                    <td><b>W</b></td>
+                    <td>Woda zamarza.</td>
+                  </tr>
+                </table>
+                <p class=center-text>[(p⇒q)∧p]⇒q</p>
+                Mimo, że schematem jest prawo logiczne (modus ponendo ponens) to przesłanki są fałszywe, więc wniosek też. Wnioskowanie musi być pozbawione błędu materialnego.
+              
+              <br><br>
+              Przykład błędu formalnego:<br><br>
+              <table>
+                <tr>
+                  <td>P<sub>1</sub></td>
+                   <td>Jeżeli temperatura wynosi -10°C to woda zamarza</td>
+                </tr>
+                <tr>
+                  <td>P<sub>2</sub></td>
+                  <td>Woda zamarza</td>
+                 </tr>
+                <tr>
+                  <td><b>W</b></td>
+                  <td>Temperatura wynosi -10°C</td>
+                </tr>
+              </table>
+              <p class="center-text">[(p⇒q)∧q]⇒p</p>
+              Ten konkretny przykład błędu formalnego to schemat <i>wnioskowania redukcyjnego</i>. Jest on zawodny, ale mimo to jest on częściowo użyteczny i często używany. Pozwala on osiągnąć pewne prawdopodobieństwo, ale nie gwarantuje prawdy.
+            </div>
     </div>
 </body>
