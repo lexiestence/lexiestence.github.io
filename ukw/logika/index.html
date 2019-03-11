@@ -26,6 +26,8 @@
          <a href="#prawdalog"><div class="menu-button">Prawda logiczna</div></a>
          <a href="#wyniklog"><div class="menu-button">Wynikanie logiczne</div></a>
          <a href="#wniolog"><div class="menu-button">Wnioskowanie logiczne</div></a>
+         <a href="#rachnaz"><div class="menu-button">Tradycyjny rachunek nazw</div></a>
+         <a href="#prawkwalog"><div class="menu-button">Prawa kwadratu logicznego</div></a>
         </div>
 
         <div id="content">
@@ -448,6 +450,111 @@ to (
               </table>
               <p class="center-text">[(p⇒q)∧q]⇒p</p>
               Ten konkretny przykład błędu formalnego to schemat <i>wnioskowania redukcyjnego</i>. Jest on zawodny, ale mimo to jest on częściowo użyteczny i często używany. Pozwala on osiągnąć pewne prawdopodobieństwo, ale nie gwarantuje prawdy.
-            </div>
+              <hr>
+              <a name="rachnaz"></a>
+              <h2>Tradycyjny rachunek nazw</h2>
+                
+              Klasyczne zdanie kategoryczne ma jedną z 4 postaci:
+              <ol>
+                <li>
+                  Każde S jest P.
+                </li>
+                <li>
+                  Żadne S jest P.
+                </li>
+                <li>
+                  Niektóre S są P.
+                </li>
+                <li>
+                  Niektóre S nie są P.
+                </li>
+              </ol>
+              W miejsce S i P podstawiamy nazwy, ale obowiązują pewne ograniczenia. Muszą to być nazwy <u>generalne</u>, <u>niepuste</u> i <u>nie mogą to być nazwy uniwersalne</u>.<br>
+              W tradycyjnej terminologii nazwy nazywamy <i>terminami</i>.
+              <br><br>
+              Symbolicznie zapisujemy je w taki sposób:<br>
+              S a P - Każde S jest P - Zdania ogólnotwierdzące - Każdy kot jest ssakiem<br>
+              S e P - Żadne S nie jest P - Zdania ogólnoprzeczące P - Żaden kot nie jest psem<br>
+              S i P - Niektóre S są P - Zdania szczegółowotwierdzące - Niektórzy stutenci są kierowcami<br>
+              S o P - Niektóre S nie są P - Zdania szczegółowoprzeczące - Niektórzy studenci nie są kierowcami<br>
+              <br>
+              <table style="font-size: 14px;">
+                <tr>
+                  <td>S a P</td> <td>Każde S jest P</td><td>Każdy kot jest ssakiem</td><td>Zdania ogólnotwierdzące</td><td rowspan=2>Zdania twierdzące</td>
+                </tr>
+                <tr>
+                  <td>S e P</td> <td>Żadne S nie jest P</td><td>Żaden kot nie jest psem</td><td>Zdania ogólnoprzeczące</td>
+                </tr>
+                <tr>
+                  <td>S i P</td> <td>Niektóre S są P</td><td>Niektórzy studenci są kierowcami</td><td>Zdania szczegółowotwierdzące</td><td rowspan=2>Zdania szczegółowe</td>
+                </tr>
+                <tr>
+                  <td>S o P</td><td>Niektóre S nie są P</td><td>Niektórzy studenci nie są kierowcami</td><td>Zdania szczegółowoprzeczące</td>
+                </tr>
+              </table>
+              <br>
+              Ilość zdania - ogólny czy szczegółowe<br>
+              Jakość zdania - twierdzące czy przeczące<br>
+
+              S a P ⇒ S i P
+
+              <hr>
+
+              <a name="prawkwalog"></a>
+
+              <h2>Prawa kwadratu logicznego</h2>
+
+              <table style="text-align: center;">
+                  <tr>
+                    <td>S a P</td>
+                    <td>Przeciwieństwo</td>
+                    <td>S e P</td>
+                  </tr>
+                  <tr>
+                    <td>Podporządkowanie</td>
+                    <td><p class="center-text">Sprzeczność<br>
+                    <sub>(po przekątynch)</sub></p></td>
+                    <td>Podporządkowanie</td>
+                  </tr>
+                  <tr>
+                    <td>S i P</td>
+                    <td>Podprzeciwieństwo</td>
+                    <td>S o P</td>
+                  </tr>
+                </table>
+                <br>
+
+
+              Prawa kwadratu logicznego ukazują zależności pomiędzy zdaniami kategorycznymi o tych samych podmiotach i tych samych orzecznikach.<br><br>
+
+              S - Podmiot (łac. subiectum)<br>
+              P - Orzecznik (łac. predicatum)<br><br>
+
+              a, i - twierdzę (łac. affirmo)<br>
+              e, o - przeczę (łac. nego)<br><br>
+
+              Zdaniem podmiotowo-orzecznikowym jest zdanie:
+
+              <p class=center-text>A jest B.</p>
+              <p class=center-text><u>Jan</u> jest <u>adwokatem</u>.</p>
+
+              <h3>Przeciwieństwo</h3>
+
+              Zdania przeciwne mogą być oba prawdziwe, ale nie oba fałszywe.<br><br>
+              Jeżeli prawdą jest że każdy kot jest ssakiem, to prawdą jest też to, że <i>nieprawda, że żaden kot nie jest ssakiem</i>.<br>
+              <h3>Sprzeczność</h3>
+              Spośród zdań sprzecznych zawsze jedno jest prawdziwe a drugie fałszywe.
+              
+              <p class="center-text">
+                  S a P ≡ ~(S o P)<br>
+                  S e P ≡ ~(S i P)<br>
+                  S i P ≡ ~(S e P)<br>
+                  S o P ≡ ~(S a P)<br>
+                </p>
+              <h3>Podprzeciwieństwo</h3>
+              Dla zdań podprzeciwnych jest zależność odwrotna niż dla zdań przeciwnych. Nie mogą być oba fałszywe, ale mogą być oba prawdziwe.
+              <h3>Podporządkowanie</h3>
+              
+        </div>
     </div>
 </body>
