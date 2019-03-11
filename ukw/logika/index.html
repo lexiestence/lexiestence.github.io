@@ -25,6 +25,7 @@
          <a href="#skrocona"><div class="menu-button">Metoda skrócona</div></a>
          <a href="#prawdalog"><div class="menu-button">Prawda logiczna</div></a>
          <a href="#wyniklog"><div class="menu-button">Wynikanie logiczne</div></a>
+         <a href="#wniolog"><div class="menu-button">Wnioskowanie logiczne</div></a>
         </div>
 
         <div id="content">
@@ -328,9 +329,31 @@ to (
             <br><br>
             Ze zdań Z<sub>1</sub>, Z<sub>2</sub>, ..., Z<sub>n</sub> wynika logicznie zdanie Z<sub>n+1</sub> wtedy i tylko wtedy gdy implikacja której poprzednikiem są zdania Z<sub>1</sub>, Z<sub>2</sub>, ..., Z<sub>n</sub>, a następnikiem zdanie Zn+1 jest podstawieniem jakiegoś prawa logicznego
             <br><br>
-            Przykład:<br>
-            p: temperatura wynosi -10°C<br>
-            q: woda zamarza
+            Przykład:
+
+            <ol>
+              <li>Ustalić formułę zdaniową Z1</li>
+              <li>Ustalić formułę zdaniową Z2</li>
+              <li>Zapisać formuły w postaci implikacji</li>
+              <li>Sprawdzić czy wyrażene jest tautologią.</li>
+            </ol>
+
+            Z<sub>1</sub>: W Bydgoszczy jest ładna pogoda i Polska ma kolonię na księżycu<br>
+            Z<sub>2</sub>: Polska ma pogodę na księżycu <br>
+            
+            <pre>
+              (p∧q)⇒q
+                10 0 0
+                
+              SPRZECZNOŚĆ - TAUTOLOGIA
+            </pre>
+            Jest to prawo logiczne, więc zachodzi wynikanie logiczne.   
+
+            <hr>
+
+            <a name="wniolog"></a>
+            <h2>Wnioskowanie logiczne</h2>
+            Wnioskowanie to układ zdań, w którym na podstawie zdań (conajmniej 1) uznanych za prawdziwe uznaje się za prawdziwe jakieś inne zdanie. Zdania na podstawie których uznaje się inne nazywa się <i>przesłankami</i>, a zdanie uznane za prawdziwe na podstawie innych zdań to <i>wniosek</i>.
           </div>
     </div>
 </body>
