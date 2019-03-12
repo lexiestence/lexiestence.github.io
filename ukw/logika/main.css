@@ -1,3 +1,7 @@
+html{
+    scroll-behavior: smooth;
+}
+
 hr{
     color: white;
 }
@@ -6,7 +10,6 @@ body{
     margin: 0px;
     padding: 0px;
     background-color: #3d0023;
-    scroll-behavior: smooth;
     font-family: 'Ubuntu', sans-serif;
 }
 
@@ -31,24 +34,21 @@ table{
     left: 0px;
     top: 90px;
     float: left;
-    width: 250px;
+    width: 270px;
 }
 
 .menu-button{
-    width: 230;
+    width: 250px;
     line-height: 25px;
     margin: 0px;
-    transition: 0.2s;
+    transition: linear 0.1s;
     padding: 3px;
     padding-left: 20px;
     height: 25px;
-    border: solid, 1px;
-    border-color: rgba(238,0,136, 0);
+    background-color: rgba(255,255,255,0)
 }
 .menu-button:hover{
-    border: solid, 1px;
-    border-color: rgba(238, 0, 136, 1);
-    background-color: rgba(255,255,255,0.1)l
+    background-color: rgba(255,255,255,0.1)
 }
 
 #content{
@@ -76,7 +76,7 @@ pre{
 a{
     text-decoration: none;
     color: inherit;
-    transition: 0.2s;
+    transition: 0.1s;
 }
 a:hover{
     color: #ee0088
