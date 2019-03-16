@@ -100,3 +100,17 @@ td{
     width: 100%; 
     text-align: center;
 }
+
+.logic-table{
+    margin: 5px;
+    border: none;
+}
+
+.logic-cell{
+    border: none;
+}
+
+.logic-header{
+    font-style: italic;
+    font-weight: bold;
+}

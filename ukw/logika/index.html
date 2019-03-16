@@ -1,578 +1,1909 @@
 <head>
-    <title>Logika formalna</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="main.css">
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+  <title>Logika formalna</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="main.css" />
+  <link
+    href="https://fonts.googleapis.com/css?family=Ubuntu"
+    rel="stylesheet"
+  />
+  <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png" />
 </head>
 <body>
-    
-    <div id="titlebar">
-        Logika formalna
-    </div>  
+  <div id="titlebar">
+    Logika formalna
+  </div>
 
-    <div id="container">
-        <div id=menu>
-         <a href="#funktory-logiczne"><div class="menu-button">Funtory logiczne</div></a>
-         <a href="#rownowaznosc-alternatyw"><div class="menu-button">Rownoważność alternatyw</div></a>    
-         <a href="#rownowaznosc-koniunkcji"><div class="menu-button">Rownoważność koniunkcji</div></a>
-         <a href="#modus-tollendo-tollens"><div class="menu-button">Modus tollendo tollens</div></a>
-         <a href="#modus-tollendo-ponens"><div class="menu-button">Modus tollendo ponens</div></a>
-         <a href="#modus-ponendo-tollens"><div class="menu-button">Modus ponendo tollens</div></a>
-         <a href="#modus-ponendo-ponens"><div class="menu-button">Modus ponendo ponens</div></a>
-         <a href="#prawa-de-morgana"><div class="menu-button">Prawa de Morgana</div></a>   
-         <a href="#prawo-transpozycji"><div class="menu-button">Prawo transpozycji</div></a>         
-         <a href="#prawo-sylogizmu-hipotetyzcnego"><div class="menu-button">Prawo sylogizmu hipotetycznego</div></a>
-         <a href="#skrocone-sprawdzanie-tautologii"><div class="menu-button">Metoda skrócona</div></a>
-         <a href="#prawda-logiczna"><div class="menu-button">Prawda logiczna</div></a>
-         <a href="#wynikanie-logiczne"><div class="menu-button">Wynikanie logiczne</div></a>
-         <a href="#wnioskowanie-logiczne"><div class="menu-button">Wnioskowanie logiczne</div></a>
-         <a href="#tradycyjny-rachunek-nazw"><div class="menu-button">Tradycyjny rachunek nazw</div></a>
-         <a href="#prawa-kwadratu-logicznego"><div class="menu-button">Prawa kwadratu logicznego</div></a>
-         <a href="#diagramy-venna"><div class="menu-button">Diagramy Venna</div></a>
-        </div>
+  <div id="container">
+    <div id="menu">
+      <a href="#funktory-logiczne"
+        ><div class="menu-button">Funtory logiczne</div></a
+      >
+      <a href="#rownowaznosc-alternatyw"
+        ><div class="menu-button">Rownoważność alternatyw</div></a
+      >
+      <a href="#rownowaznosc-koniunkcji"
+        ><div class="menu-button">Rownoważność koniunkcji</div></a
+      >
+      <a href="#modus-tollendo-tollens"
+        ><div class="menu-button">Modus tollendo tollens</div></a
+      >
+      <a href="#modus-tollendo-ponens"
+        ><div class="menu-button">Modus tollendo ponens</div></a
+      >
+      <a href="#modus-ponendo-tollens"
+        ><div class="menu-button">Modus ponendo tollens</div></a
+      >
+      <a href="#modus-ponendo-ponens"
+        ><div class="menu-button">Modus ponendo ponens</div></a
+      >
+      <a href="#prawa-de-morgana"
+        ><div class="menu-button">Prawa de Morgana</div></a
+      >
+      <a href="#prawo-transpozycji"
+        ><div class="menu-button">Prawo transpozycji</div></a
+      >
+      <a href="#prawo-sylogizmu-hipotetyzcnego"
+        ><div class="menu-button">Prawo sylogizmu hipotetycznego</div></a
+      >
+      <a href="#skrocone-sprawdzanie-tautologii"
+        ><div class="menu-button">Metoda skrócona</div></a
+      >
+      <a href="#prawda-logiczna"
+        ><div class="menu-button">Prawda logiczna</div></a
+      >
+      <a href="#wynikanie-logiczne"
+        ><div class="menu-button">Wynikanie logiczne</div></a
+      >
+      <a href="#wnioskowanie-logiczne"
+        ><div class="menu-button">Wnioskowanie logiczne</div></a
+      >
+      <a href="#tradycyjny-rachunek-nazw"
+        ><div class="menu-button">Tradycyjny rachunek nazw</div></a
+      >
+      <a href="#prawa-kwadratu-logicznego"
+        ><div class="menu-button">Prawa kwadratu logicznego</div></a
+      >
+      <a href="#diagramy-venna"
+        ><div class="menu-button">Diagramy Venna</div></a
+      >
+    </div>
 
-        <div id="content">
-            <a name="funktory-logiczne"></a>
-            <h2>Funktory logiczne</h2>
-            <h3>Negacja ~p</h3>
-            Negacja zamienia wartość zdania na przeciwną.
-            <pre>
-             p ~p
-             1  0
-             0  1
-            </pre>
-    
-            <h3>Koniunkcja p∧q</h3>
-            Koniunkcja jest prawdziwa wtedy, kiedy wszystkie jej zdania są prawdziwe.
-            <pre>
-             p q p∧q
-             1 1  1
-             0 1  0
-             1 0  0
-             0 0  0
-            </pre>
-    
-            <h3>Alternatywa</h3>
-            
-            <h4>Zwykła p∨q</h4>
-            Alternatywa zwykła jest prawdziwa wtedy, kiedy co najmniej jedno zdanie jest prawdziwe.
-            <pre>
-             p q p∨q
-             1 1  1
-             0 1  1
-             1 0  1
-             0 0  0
-            </pre>
-    
-            <h4>Rozłączna p⊥q</h4>
-            Alternatywa rozłączna jest prawdziwa wtedy, kiedy dokładnie jedno zdanie jest prawdziwe.
-            <pre>
-             p q p⊥q
-             1 1  0
-             0 1  1
-             1 0  1
-             0 0  0
-            </pre>
-    
-            <h3>Dysjunkcja p/q</h3>
-            Dysjunkcja jest prawdziwa wtedy, kiedy przynajmniej jedno zdanie jest fałszywe.
-            <pre>
-             p q p/q
-             1 1  0
-             0 1  1
-             1 0  1
-             0 0  1
-            </pre>
-    
-            <h3>Równoważność p≡q</h3>
-            Równoważność jest prawdziwa wtedy, kiedy obydwa zdania mają taką samą wartość
-            <pre>
-             p q p≡q
-             1 1  1
-             0 1  0
-             1 0  0
-             1 1  1
-            </pre>
-    
-            <h3>Implikacja p⇒q</h3>
-            Implikacja jest <b>fałszywa</b> tylko wtedy, kiedy ze zdania prawdziwego wynika zdanie fałszywe.
-            <pre>
-             p q p⇒q
-             1 1  1
-             0 1  1
-             1 0  0
-             0 0  1
-            </pre>
+    <div id="content">
+      <a name="funktory-logiczne"></a>
+      <h2>Funktory logiczne</h2>
+      <h3>Negacja ~p</h3>
+      Negacja zamienia wartość zdania na przeciwną.
 
-            <hr>
+      <table class="logic-table">
+        <tr class="logic-header">
+          <td class="logic-cell">p</td>
+          <td class="logic-cell">~p</td>
+        </tr>
+        <tr>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+        </tr>
+        <tr>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+        </tr>
+      </table>
 
-            <a name="rownowaznosc-alternatyw"></a>
-            <h2>Równoważność alternatyw</h2>
-            <p>Alternatywy są równe, niezależnie od kolejności wyrażeń</p>
-    
-            <pre>
-            (p∨q)≡(q∨p)
-             111 1 111
-             011 1 110
-             110 1 011
-             000 1 000
-            </pre>
+      <h3>Koniunkcja p∧q</h3>
+      Koniunkcja jest prawdziwa wtedy, kiedy wszystkie jej zdania są prawdziwe.
 
-            <hr>
+      <table class="logic-table">
+        <tr class="logic-header">
+          <td class="logic-cell">p</td>
+          <td class="logic-cell">q</td>
+          <td class="logic-cell">p∧q</td>
+        </tr>
+        <tr>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+        </tr>
+        <tr>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+        </tr>
+        <tr>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">0</td>
+        </tr>
+        <tr>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">0</td>
+        </tr>
+      </table>
 
-            <a name="rownowaznosc-koniunkcji"></a>
-            <h2>Rownoważność koniunkcji</h2>
-            <p>Koniunkcje są równe, niezależnie od kolejności wyrażeń</p>
-            <pre>
-            (p∧q)≡(q∧p)
-             111 1 111
-             001 1 100
-             100 1 001
-             000 1 000
-            </pre>
-            
-            <hr>
+      <h3>Alternatywa</h3>
 
-            <a name="modus-tollendo-tollens"></a>
-            <h2>Modus tollendo tollens</h2>
-            <pre>
-            [(p⇒q)∧~q]⇒(~p)
-              111 001 1 01
-              011 001 1 10
-              110 110 1 01
-              010 110 1 10
-            </pre>
-            
-            <hr>
-    
-            <a name="modus-tollendo-ponens"></a>
-            <h2>Modus tollendo ponens</h2>
-            <pre>
-             [(p∨q)∧(~p)]⇒q
-               111 0 01  11
-               011 1 10  11
-               110 0 01  10
-               000 0 10  10
-            </pre>
-             
-            <hr>
-   
-            <a name="modus-ponendo-tollens"></a>
-            <h2>Modus ponendo tollens</h2>
-            <pre>
-            [(p/q)∧p]⇒(~q)
-              101 01 1  01
-              011 00 1  01
-              110 11 1  10
-              010 00 1  10
-            </pre>
-            
-            <hr>
-    
-            <a name="modus-ponendo-ponens"></a>
-            <h2>Modus ponendo ponens</h2>
-            <pre>
-            [(p⇒q)∧p]⇒q
-              111 11  11
-              011 00  11
-              100 00  00
-              010 00  10
-            </pre>
-            
-            <hr>
-    
-            <a name="prawa-de-morgana"></a>
-            <h2>I prawo de Morgana</h2>
-            <pre>
-             ~(p∧q)≡(~p∨~q)
-             0 111 1 01001
-             1 001 1 10101
-             1 100 1 01110
-             1 000 1 10110
-            </pre>
-    
-            <h2>II prawo de Morgana</h2>
-            <pre>
-             ~(p∨q)≡(~p∧~q)
-             0 111 1 01001
-             0 011 1 10001
-             0 110 1 01010
-             1 000 1 10110
-            </pre>
-            
-            <hr>
-            
-            <a name="prawo-transpozycji"></a>
-            <h2>Prawo transpozycji</h2>
-            (p⇒q)⇒(~q⇒~p)
-            <br><br>
-            Jeżeli (<u>jeżeli Bydgoszcz jest stolicą Polski, to Polska posiada kolonię na księżycu</u>) to (<u>jeżeli Polska nie posiada kolonii na księżycu to Bydgoszcz nie jest stolicą Polski</u>).
+      <h4>Zwykła p∨q</h4>
+      Alternatywa zwykła jest prawdziwa wtedy, kiedy co najmniej jedno zdanie
+      jest prawdziwe.
 
-            <hr>
+      <table class="logic-table">
+        <tr class="logic-header">
+          <td class="logic-cell">p</td>
+          <td class="logic-cell">q</td>
+          <td class="logic-cell">p∨q</td>
+        </tr>
+        <tr>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+        </tr>
+        <tr>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+        </tr>
+        <tr>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+        </tr>
+        <tr>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">0</td>
+        </tr>
+      </table>
 
-            <a name="sylo"></a>
-            <h2>Prawo sylogizmu hipotetycznego koniunkcyjnego</h2>
-            <pre>
-            [(p⇒q)∧(q⇒r)]⇒(p⇒r)
-              111  1 111  1 111
-              011  1 111  1 011
-              100  0 011  1 111
-              010  1 011  1 011
-              111  0 100  1 100
-              011  0 100  1 010
-              100  0 010  1 100
-              010  1 010  1 010
-            </pre>
-    
-            <h2>Prawo sylogizmu hipotetycznego w postaci bezkoniunkcyjnej</h2>
-            <pre>
-            (p⇒r)⇒[(q⇒r)⇒(p⇒r)]
-             111  1  111 1  111
-             011  1  111 1  011
-             111  1  011 1  111
-             011  1  011 1  011
-             100  1  100 1  100
-             010  1  100 1  010
-             100  1  010 0  100
-             010  1  010 1  010
-            </pre>
-            
-            <hr>
+      <h4>Rozłączna p⊥q</h4>
+      Alternatywa rozłączna jest prawdziwa wtedy, kiedy dokładnie jedno zdanie
+      jest prawdziwe.
 
-            <a name="skrocone-sprawdzanie-tautologii"></a>
-            <h2>Skrócone sprawdzanie tautologii</h2>
-            W celu szybkiego rozstrzygnięcia czy dany zapis jest tautologią można sprawdzić, czy możliwe jest uzyskanie wartości 0 bez żadnych sprzeczności.
-            <pre>
-            (p∧q)⇒(p≡q)
-             111 0 101 
-             CBC A DBD
+      <table class="logic-table">
+        <tr class="logic-header">
+          <td class="logic-cell">p</td>
+          <td class="logic-cell">q</td>
+          <td class="logic-cell">p⊥q</td>
+        </tr>
+        <tr>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+        </tr>
+        <tr>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+        </tr>
+        <tr>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+        </tr>
+        <tr>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">0</td>
+        </tr>
+      </table>
 
-             SPRZECZNOŚĆ - TAUTOLOGIA
-             p≡q
-             101
-            </pre>
-            <pre>
-            (p⇒q)⇒(p∨q)
-             010 0 000
-             DBD A CBC
-             BRAK SPRZECZNOŚCI - TO NIE TAUTOLOGIA
-            </pre>
-            <pre>
-            (p⇒q)⇒(~q⇒~p)
-             11 0 1 100 01
-             EB E A CDB CD
+      <h3>Dysjunkcja p/q</h3>
+      Dysjunkcja jest prawdziwa wtedy, kiedy przynajmniej jedno zdanie jest
+      fałszywe.
 
-             SPRZECZNOŚĆ - TAUTOLOGIA
-             p⇒q
-             11 0
-            </pre>
+      <table class="logic-table">
+        <tr class="logic-header">
+          <td class="logic-cell">p</td>
+          <td class="logic-cell">q</td>
+          <td class="logic-cell">p/q</td>
+        </tr>
+        <tr>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+        </tr>
+        <tr>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+        </tr>
+        <tr>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+        </tr>
+        <tr>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+        </tr>
+      </table>
 
-            <pre>
-             <b>Modus ponendo ponens</b>
+      <h3>Równoważność p≡q</h3>
+      Równoważność jest prawdziwa wtedy, kiedy obydwa zdania mają taką samą
+      wartość
 
-             [(p⇒q)∧p]⇒q
-               11 0 11 00
-               ED E BC AB
+      <table class="logic-table">
+        <tr class="logic-header">
+          <td class="logic-cell">p</td>
+          <td class="logic-cell">q</td>
+          <td class="logic-cell">p≡q</td>
+        </tr>
+        <tr>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+        </tr>
+        <tr>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+        </tr>
+        <tr>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">0</td>
+        </tr>
+        <tr>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+        </tr>
+      </table>
 
-             SPRZECZNOŚĆ - TAUTOLOGIA
-             p⇒q
-             11 0
-            </pre>
+      <h3>Implikacja p⇒q</h3>
+      Implikacja jest <b>fałszywa</b> tylko wtedy, kiedy ze zdania prawdziwego
+      wynika zdanie fałszywe.
 
-            <pre>
-            [(p⇒q)∧(q⇒r)]⇒(p⇒r)
-              111 1  110  0 100
-              
-              SPRZECZNOŚĆ - TAUTOLOGIA
-              p⇒r
-              110
-            </pre>
+      <table class="logic-table">
+        <tr class="logic-header">
+          <td class="logic-cell">q</td>
+          <td class="logic-cell">P</td>
+          <td class="logic-cell">p⇒q</td>
+        </tr>
+        <tr>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+        </tr>
+        <tr>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+        </tr>
+        <tr>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">0</td>
+        </tr>
+        <tr>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+        </tr>
+      </table>
 
-            <pre>
-            (p⇒q)⇒[(q⇒r)⇒(p⇒r)]
-             111  0  110 0 10 0
-             SPRZECNOŚĆ - TAUTOLOGIA
-             q⇒r
-             110
-            </pre>
-            
-            <hr>
+      <hr />
 
-            <a name="prawda-logiczna"></a>
-            <h2>Prawda logiczna</h2>
-            Prawda logiczna to tyle, co podstawienie prawa logicznego.<br>
-            Wyrażenie W jest prawdą logiczną wtedy i tylko wtedy, gdy jest to podstawienie jakiegoś prawa logicznego.
-            <br><br>
-            Jeżeli (temperatura jest ujemna to woda zamarza) to (jeżeli woda nie zamarza, to temperatura nie jest ujemna)
-            
-            <pre>
+      <a name="rownowaznosc-alternatyw"></a>
+      <h2>Równoważność alternatyw</h2>
+      <p>Alternatywy są równe, niezależnie od kolejności wyrażeń</p>
+
+      <table class="logic-table">
+        <tr class="logic-header">
+          <td class="logic-cell">(</td>
+          <td class="logic-cell">p</td>
+          <td class="logic-cell">∨</td>
+          <td class="logic-cell">q</td>
+          <td class="logic-cell">)</td>
+          <td class="logic-cell">≡</td>
+          <td class="logic-cell">(</td>
+          <td class="logic-cell">q</td>
+          <td class="logic-cell">∨</td>
+          <td class="logic-cell">p</td>
+          <td class="logic-cell">)</td>
+        </tr>
+        <tr>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+        </tr>
+        <tr>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+        </tr>
+        <tr>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+        </tr>
+        <tr>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+        </tr>
+      </table>
+
+      <hr />
+
+      <a name="rownowaznosc-koniunkcji"></a>
+      <h2>Rownoważność koniunkcji</h2>
+      <p>Koniunkcje są równe, niezależnie od kolejności wyrażeń</p>
+
+      <table class="logic-table">
+        <tr class="logic-header">
+          <td class="logic-cell">(</td>
+          <td class="logic-cell">p</td>
+          <td class="logic-cell">∧</td>
+          <td class="logic-cell">q</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">≡</td>
+          <td class="logic-cell">(</td>
+          <td class="logic-cell">q</td>
+          <td class="logic-cell">∧</td>
+          <td class="logic-cell">p</td>
+          <td class="logic-cell">)</td>
+        </tr>
+        <tr>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+        </tr>
+        <tr>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+        </tr>
+        <tr>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+        </tr>
+        <tr>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+        </tr>
+      </table>
+
+      <hr />
+
+      <a name="modus-tollendo-tollens"></a>
+      <h2>Modus tollendo tollens</h2>
+
+      <table class="logic-table">
+        <tr class="logic-header">
+          <td class="logic-cell">[</td>
+          <td class="logic-cell">(</td>
+          <td class="logic-cell">p</td>
+          <td class="logic-cell">⇒</td>
+          <td class="logic-cell">q</td>
+          <td class="logic-cell">)</td>
+          <td class="logic-cell">∧</td>
+          <td class="logic-cell">~</td>
+          <td class="logic-cell">q</td>
+          <td class="logic-cell">]</td>
+          <td class="logic-cell">⇒</td>
+          <td class="logic-cell">(</td>
+          <td class="logic-cell">~</td>
+          <td class="logic-cell">q</td>
+          <td class="logic-cell">)</td>
+        </tr>
+        <tr>
+          <td class="logic-cell"></td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+        </tr>
+        <tr>
+          <td class="logic-cell"></td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+        </tr>
+        <tr>
+          <td class="logic-cell"></td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+        </tr>
+        <tr>
+          <td class="logic-cell"></td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+        </tr>
+      </table>
+
+      <hr />
+
+      <a name="modus-tollendo-ponens"></a>
+      <h2>Modus tollendo ponens</h2>
+
+      <table class="logic-table">
+        <tr class="logic-header">
+          <td class="logic-cell">[</td>
+          <td class="logic-cell">(</td>
+          <td class="logic-cell">p</td>
+          <td class="logic-cell">∨</td>
+          <td class="logic-cell">q</td>
+          <td class="logic-cell">)</td>
+          <td class="logic-cell">∧</td>
+          <td class="logic-cell">(</td>
+          <td class="logic-cell">~</td>
+          <td class="logic-cell">p</td>
+          <td class="logic-cell">)</td>
+          <td class="logic-cell">]</td>
+          <td class="logic-cell">⇒</td>
+          <td class="logic-cell">q</td>
+        </tr>
+        <tr>
+          <td class="logic-cell"></td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+        </tr>
+        <tr>
+          <td class="logic-cell"></td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+        </tr>
+        <tr>
+          <td class="logic-cell"></td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+        </tr>
+        <tr>
+          <td class="logic-cell"></td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+        </tr>
+      </table>
+
+      <hr />
+
+      <a name="modus-ponendo-tollens"></a>
+      <h2>Modus ponendo tollens</h2>
+
+      <table class="logic-table">
+        <tr class="logic-header">
+          <td class="logic-cell">[</td>
+          <td class="logic-cell">(</td>
+          <td class="logic-cell">p</td>
+          <td class="logic-cell">/</td>
+          <td class="logic-cell">q</td>
+          <td class="logic-cell">)</td>
+          <td class="logic-cell">∧</td>
+          <td class="logic-cell">p</td>
+          <td class="logic-cell">]</td>
+          <td class="logic-cell">⇒</td>
+          <td class="logic-cell">(</td>
+          <td class="logic-cell">~</td>
+          <td class="logic-cell">q</td>
+          <td class="logic-cell">)</td>
+        </tr>
+        <tr>
+          <td class="logic-cell"></td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+        </tr>
+        <tr>
+          <td class="logic-cell"></td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+        </tr>
+        <tr>
+          <td class="logic-cell"></td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+        </tr>
+        <tr>
+          <td class="logic-cell"></td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+        </tr>
+      </table>
+
+      <hr />
+
+      <a name="modus-ponendo-ponens"></a>
+      <h2>Modus ponendo ponens</h2>
+
+      <table class="logic-table">
+        <tr class="logic-header">
+          <td class="logic-cell">[</td>
+          <td class="logic-cell">(</td>
+          <td class="logic-cell">p</td>
+          <td class="logic-cell">⇒</td>
+          <td class="logic-cell">q</td>
+          <td class="logic-cell">)</td>
+          <td class="logic-cell">∧</td>
+          <td class="logic-cell">p</td>
+          <td class="logic-cell">]</td>
+          <td class="logic-cell">⇒</td>
+          <td class="logic-cell">q</td>
+        </tr>
+        <tr>
+          <td class="logic-cell"></td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+        </tr>
+        <tr>
+          <td class="logic-cell"></td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+        </tr>
+        <tr>
+          <td class="logic-cell"></td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">0</td>
+        </tr>
+        <tr>
+          <td class="logic-cell"></td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+        </tr>
+      </table>
+
+      <hr />
+
+      <a name="prawa-de-morgana"></a>
+      <h2>I prawo de Morgana</h2>
+
+      <table class="logic-table">
+        <tr class="logic-header">
+          <td class="logic-cell">~</td>
+          <td class="logic-cell">(</td>
+          <td class="logic-cell">p</td>
+          <td class="logic-cell">∧</td>
+          <td class="logic-cell">q</td>
+          <td class="logic-cell">)</td>
+          <td class="logic-cell">≡</td>
+          <td class="logic-cell">(</td>
+          <td class="logic-cell">~</td>
+          <td class="logic-cell">p</td>
+          <td class="logic-cell">∨</td>
+          <td class="logic-cell">~</td>
+          <td class="logic-cell">q</td>
+          <td class="logic-cell">)</td>
+        </tr>
+        <tr>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+        </tr>
+        <tr>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+        </tr>
+        <tr>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+        </tr>
+        <tr>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+        </tr>
+      </table>
+
+      <h2>II prawo de Morgana</h2>
+
+      <table class="logic-table">
+        <tr class="logic-header">
+          <td class="logic-cell">~</td>
+          <td class="logic-cell">(</td>
+          <td class="logic-cell">p</td>
+          <td class="logic-cell">∨</td>
+          <td class="logic-cell">q</td>
+          <td class="logic-cell">)</td>
+          <td class="logic-cell">≡</td>
+          <td class="logic-cell">(</td>
+          <td class="logic-cell">~</td>
+          <td class="logic-cell">p</td>
+          <td class="logic-cell">∧</td>
+          <td class="logic-cell">~</td>
+          <td class="logic-cell">q</td>
+          <td class="logic-cell">)</td>
+        </tr>
+        <tr>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+        </tr>
+        <tr>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+        </tr>
+        <tr>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+        </tr>
+        <tr>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+        </tr>
+      </table>
+
+      <hr />
+
+      <a name="prawo-transpozycji"></a>
+      <h2>Prawo transpozycji</h2>
+      (p⇒q)⇒(~q⇒~p)
+      <br /><br />
+      Jeżeli (<u
+        >jeżeli Bydgoszcz jest stolicą Polski, to Polska posiada kolonię na
+        księżycu</u
+      >) to (<u
+        >jeżeli Polska nie posiada kolonii na księżycu to Bydgoszcz nie jest
+        stolicą Polski</u
+      >).
+
+      <hr />
+
+      <a name="sylo"></a>
+      <h2>Prawo sylogizmu hipotetycznego w postaci koniunkcyjnej</h2>
+
+      <table class="logic-table">
+        <tr class="logic-header">
+          <td class="logic-cell">[</td>
+          <td class="logic-cell">(</td>
+          <td class="logic-cell">p</td>
+          <td class="logic-cell">⇒</td>
+          <td class="logic-cell">q</td>
+          <td class="logic-cell">)</td>
+          <td class="logic-cell">∧</td>
+          <td class="logic-cell">(</td>
+          <td class="logic-cell">q</td>
+          <td class="logic-cell">⇒</td>
+          <td class="logic-cell">r</td>
+          <td class="logic-cell">)</td>
+          <td class="logic-cell">]</td>
+          <td class="logic-cell">⇒</td>
+          <td class="logic-cell">(</td>
+          <td class="logic-cell">p</td>
+          <td class="logic-cell">⇒</td>
+          <td class="logic-cell">r</td>
+          <td class="logic-cell">)</td>
+        </tr>
+        <tr>
+          <td class="logic-cell"></td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+        </tr>
+        <tr>
+          <td class="logic-cell"></td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+        </tr>
+        <tr>
+          <td class="logic-cell"></td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+        </tr>
+        <tr>
+          <td class="logic-cell"></td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+        </tr>
+        <tr>
+          <td class="logic-cell"></td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+        </tr>
+        <tr>
+          <td class="logic-cell"></td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+        </tr>
+        <tr>
+          <td class="logic-cell"></td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+        </tr>
+        <tr>
+          <td class="logic-cell"></td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+        </tr>
+      </table>
+
+      <h2>Prawo sylogizmu hipotetycznego w postaci bezkoniunkcyjnej</h2>
+
+      <table class="logic-table">
+        <tr class="logic-header">
+          <td class="logic-cell">(</td>
+          <td class="logic-cell">p</td>
+          <td class="logic-cell">⇒</td>
+          <td class="logic-cell">r</td>
+          <td class="logic-cell">)</td>
+          <td class="logic-cell">⇒</td>
+          <td class="logic-cell">[</td>
+          <td class="logic-cell">(</td>
+          <td class="logic-cell">q</td>
+          <td class="logic-cell">⇒</td>
+          <td class="logic-cell">r</td>
+          <td class="logic-cell">)</td>
+          <td class="logic-cell">⇒</td>
+          <td class="logic-cell">(</td>
+          <td class="logic-cell">p</td>
+          <td class="logic-cell">⇒</td>
+          <td class="logic-cell">r</td>
+          <td class="logic-cell">)</td>
+          <td class="logic-cell">]</td>
+        </tr>
+        <tr>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell"></td>
+        </tr>
+        <tr>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell"></td>
+        </tr>
+        <tr>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell"></td>
+        </tr>
+        <tr>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell"></td>
+        </tr>
+        <tr>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell"></td>
+        </tr>
+        <tr>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell"></td>
+        </tr>
+        <tr>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell"></td>
+        </tr>
+        <tr>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell"></td>
+        </tr>
+      </table>
+
+      <hr />
+
+      <a name="skrocone-sprawdzanie-tautologii"></a>
+      <h2>Skrócone sprawdzanie tautologii</h2>
+      W celu szybkiego rozstrzygnięcia czy dany zapis jest tautologią można
+      sprawdzić, czy możliwe jest uzyskanie wartości 0 bez żadnych sprzeczności.
+
+      <table class="logic-table">
+        <tr class="logic-header">
+          <td class="logic-cell">(</td>
+          <td class="logic-cell">p</td>
+          <td class="logic-cell">∧</td>
+          <td class="logic-cell">q</td>
+          <td class="logic-cell">)</td>
+          <td class="logic-cell">⇒</td>
+          <td class="logic-cell">(</td>
+          <td class="logic-cell">p</td>
+          <td class="logic-cell">≡</td>
+          <td class="logic-cell">q</td>
+          <td class="logic-cell">)</td>
+        </tr>
+        <tr>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+        </tr>
+        <tr>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">C</td>
+          <td class="logic-cell">B</td>
+          <td class="logic-cell">C</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">A</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">D</td>
+          <td class="logic-cell">B</td>
+          <td class="logic-cell">D</td>
+          <td class="logic-cell"></td>
+        </tr>
+      </table>
+
+      Sprzeczność - jest to tautologia
+
+      <table class="logic-table">
+        <tr class="logic-header">
+          <td class="logic-cell">(</td>
+          <td class="logic-cell">p</td>
+          <td class="logic-cell">⇒</td>
+          <td class="logic-cell">q</td>
+          <td class="logic-cell">)</td>
+          <td class="logic-cell">⇒</td>
+          <td class="logic-cell">(</td>
+          <td class="logic-cell">p</td>
+          <td class="logic-cell">∨</td>
+          <td class="logic-cell">q</td>
+          <td class="logic-cell">)</td>
+        </tr>
+        <tr>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+        </tr>
+        <tr>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">D</td>
+          <td class="logic-cell">B</td>
+          <td class="logic-cell">D</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">A</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">C</td>
+          <td class="logic-cell">B</td>
+          <td class="logic-cell">C</td>
+          <td class="logic-cell"></td>
+        </tr>
+      </table>
+
+      Brak sprzeczności - tautologia
+
+      <table class="logic-table">
+        <tr class="logic-header">
+          <td class="logic-cell">[</td>
+          <td class="logic-cell">(</td>
+          <td class="logic-cell">p</td>
+          <td class="logic-cell">⇒</td>
+          <td class="logic-cell">q</td>
+          <td class="logic-cell">)</td>
+          <td class="logic-cell">∧</td>
+          <td class="logic-cell">p</td>
+          <td class="logic-cell">]</td>
+          <td class="logic-cell">⇒</td>
+          <td class="logic-cell">q</td>
+        </tr>
+        <tr>
+          <td class="logic-cell"></td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">0</td>
+        </tr>
+        <tr>
+          <td class="logic-cell"></td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">E</td>
+          <td class="logic-cell">D</td>
+          <td class="logic-cell">E</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">B</td>
+          <td class="logic-cell">C</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">A</td>
+          <td class="logic-cell">B</td>
+        </tr>
+      </table>
+
+      Sprzeczność - jest to tautologia, modus ponendo ponens.
+
+      <hr />
+
+      <a name="prawda-logiczna"></a>
+      <h2>Prawda logiczna</h2>
+      Prawda logiczna to tyle, co podstawienie prawa logicznego.<br />
+      Wyrażenie W jest prawdą logiczną wtedy i tylko wtedy, gdy jest to
+      podstawienie jakiegoś prawa logicznego.
+      <br /><br />
+      Jeżeli (temperatura jest ujemna to woda zamarza) to (jeżeli woda nie
+      zamarza, to temperatura nie jest ujemna)
+
+      <pre>
             (p⇒q)⇒(~q⇒~p)
              110  0 10001
              SPRZECZNOŚĆ - TAUTOLOGIA
              p⇒q
              110
-            </pre>
+            </pre
+      >
 
-            Jeżeli [(Jeżeli Bydgoszcz jest stolicą Polski to Polska posiada bazę na Marsie) i (Polska nie posiada bazy na Marsie)] to nie prawda, że Bydgoszcz jest stolicą Polski.
-            <pre>[(p⇒q)∧~q]∧~p</pre>
-            Modus tollendo tollens - prawda logiczna<br> <!-- fuck this shit i'm out-->  
-            
-            <hr>
+      <table class="logic-table">
+        <tr class="logic-header">
+          <td class="logic-cell">(</td>
+          <td class="logic-cell">p</td>
+          <td class="logic-cell">⇒</td>
+          <td class="logic-cell">q</td>
+          <td class="logic-cell">)</td>
+          <td class="logic-cell">⇒</td>
+          <td class="logic-cell">(</td>
+          <td class="logic-cell">~</td>
+          <td class="logic-cell">q</td>
+          <td class="logic-cell">⇒</td>
+          <td class="logic-cell">~</td>
+          <td class="logic-cell">p</td>
+          <td class="logic-cell">)</td>
+        </tr>
+        <tr>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+        </tr>
+      </table>
 
-            <a name="wynikanie-logiczne"></a>
-            <h2>Wynikanie logiczne</h2>
-            Z Z<sub>1</sub> wynika wyrażenie Z<sub>2</sub> jeżeli wyrażenie Z<sub>1</sub>⇒Z<sub>2</sub> jest prawdą logiczną.
-            <br><br>
-            Ze zdań Z<sub>1</sub>, Z<sub>2</sub>, ..., Z<sub>n</sub> wynika logicznie zdanie Z<sub>n+1</sub> wtedy i tylko wtedy gdy implikacja której poprzednikiem są zdania Z<sub>1</sub>, Z<sub>2</sub>, ..., Z<sub>n</sub>, a następnikiem zdanie Zn+1 jest podstawieniem jakiegoś prawa logicznego
-            <br><br>
-            Przykład:
+      Sprzeczność - jest to tautologia a więc wyrażenie jest prawdą logiczną.<br /><br />
 
-            <ol>
-              <li>Ustalić formułę zdaniową Z1</li>
-              <li>Ustalić formułę zdaniową Z2</li>
-              <li>Zapisać formuły w postaci implikacji</li>
-              <li>Sprawdzić czy wyrażene jest tautologią.</li>
-            </ol>
+      Jeżeli [(Jeżeli Bydgoszcz jest stolicą Polski to Polska posiada bazę na
+      Marsie) i (Polska nie posiada bazy na Marsie)] to nie prawda, że Bydgoszcz
+      jest stolicą Polski.
+      <p>[(p⇒q)∧~q]∧~p</p>
+      Modus tollendo tollens - prawda logiczna<br />
 
-            Z<sub>1</sub>: W Bydgoszczy jest ładna pogoda i Polska ma kolonię na księżycu<br>
-            Z<sub>2</sub>: Polska ma pogodę na księżycu <br>
-            
-            <pre>
-              (p∧q)⇒q
-                10 0 0
-                
-              SPRZECZNOŚĆ - TAUTOLOGIA
-            </pre>
-            Jest to prawo logiczne, więc zachodzi wynikanie logiczne.   
+      <hr />
 
-            <hr>
+      <a name="wynikanie-logiczne"></a>
+      <h2>Wynikanie logiczne</h2>
+      Z Z<sub>1</sub> wynika wyrażenie Z<sub>2</sub> jeżeli wyrażenie
+      Z<sub>1</sub>⇒Z<sub>2</sub> jest prawdą logiczną. <br /><br />
+      Ze zdań Z<sub>1</sub>, Z<sub>2</sub>, ..., Z<sub>n</sub> wynika logicznie
+      zdanie Z<sub>n+1</sub> wtedy i tylko wtedy gdy implikacja której
+      poprzednikiem są zdania Z<sub>1</sub>, Z<sub>2</sub>, ..., Z<sub>n</sub>,
+      a następnikiem zdanie Zn+1 jest podstawieniem jakiegoś prawa logicznego
+      <br /><br />
+      Przykład:
 
-            <a name="wnioskowanie-logiczne"></a>
-            <h2>Wnioskowanie logiczne</h2>
-            Wnioskowanie to układ zdań, w którym na podstawie zdań (co najmniej 1) uznanych za prawdziwe uznaje się za prawdziwe jakieś inne zdanie. Zdania na podstawie których uznaje się inne nazywa się <i>przesłankami</i>, a zdanie uznane za prawdziwe na podstawie innych zdań to <i>wniosek</i>.
-            <br><br>
-            <table>
-                <tr>
-                  <td>P<sub>1</sub></td>
-                  <td>Zdałam 1 egzamin w sesji.</td>
-                </tr>
-                <tr>
-                  <td>P<sub>2</sub></td>
-                  <td>Zdałam 2 egzamin w sesji.</td>
-                </tr>
-                <tr><td>...</td><td></td></tr>
-                <tr>
-                  <td>P<sub>n</sub></td>
-                  <td>Zdałam n-ty egzamin w sesji</td>
-                </tr>
-                <tr>
-                  <td><b>W</b></td>
-                  <td>Zdam każdy egzamin w sesji.</td>
-                </tr>
-              </table>
-              <br><br>
-              <table>
-                  <tr>
-                    <td>P<sub>1</sub></td>
-                    <td>Nieprawda, że temperatura jest ujemna</td>
-                  </tr>
-                  <tr>
-                    <td>P<sub>2</sub></td>
-                    <td>Nieprawda, że woda zamarza</td>
-                  </tr>
-                  <tr>
-                    <td><b>W</b></td>
-                    <td>Nieprawda, że woda zamarza w nieujemnej temperaturze.</td>
-                  </tr>
-                </table>
+      <ol>
+        <li>Ustalić formułę zdaniową Z1</li>
+        <li>Ustalić formułę zdaniową Z2</li>
+        <li>Zapisać formuły w postaci implikacji</li>
+        <li>Sprawdzić czy wyrażene jest tautologią.</li>
+      </ol>
 
-                <br><br>
-                Wnioskowanie dedukcyjne występuje wtedy, gdy wniosek wynika logicznie z przesłanek.
-                Schematom wnioskowań dedukcyjnych odpowiadają prawa logiczne o postaci implikacji.
-                Schematowi wnioskowania o postaci takiej jak w powyższych tabelach odpowiada formuła zdaniowa o postaci:<br>
-                <p class="center-text">(P<sub>1</sub>∧P<sub>2</sub>∧ ... ∧P<sub>n</sub>)⇒W</p>
-                Formułę zdaniową odpowiadającą danemu schematowi wnioskowania nazywamy zasadą wnioskowania.
-                Zasada wnioskowania to formuła zdaniowa odpowiadająca schematowi wnioskowania. Wnioskowanie dedykcyjne cechuje się tym, że z prawdziwych przesłanek zawsze uzyskamy prawdziwy wniosek.
-                <br><br>
-                Przykład:<br><br>
-                P<sub>1</sub>: Warszawa jest stolicą Polski<br>
-                P<sub>2</sub>: Jeżeli temperatura jest ujemna to woda zamarza.<br>
-                W: Woda zamarza.<br><br>
-                <pre>
-                  [p∧(q⇒r)]⇒r
-                   11 01 0  00
+      Z<sub>1</sub>: W Bydgoszczy jest ładna pogoda i Polska ma kolonię na
+      księżycu<br />
+      Z<sub>2</sub>: Polska ma pogodę na księżycu <br />
 
-                   BRAK SPRZECZNOŚCI
-                </pre>
-                Powyższy przykład nie jest wnioskowaniem logicznym, ponieważ jego zasada wnioskowania nie jest prawem logicznym.<br><br>
-                Błąd materialny występuje wtedy, gdy przesłanka wnioskowania (co najmniej 1) jest fałszywa.<br>
-                Błąd formalny polega na tym, że ktoś wnioskuje wedłuk schematu zawodnego, niededukcyjnego, a uważa go za dedukcyjny.
-                <br><br>
-                Przykład błędu materialnego:<br><br>
-                <table>
-                  <tr>
-                    <td>P<sub>1</sub></td>
-                     <td>Jeżeli temperatura wynosi +5°C to woda zamarza</td>
-                  </tr>
-                  <tr>
-                    <td>P<sub>2</sub></td>
-                    <td>Temperatura wynosi +5°C</td>
-                   </tr>
-                  <tr>
-                    <td><b>W</b></td>
-                    <td>Woda zamarza.</td>
-                  </tr>
-                </table>
-                <p class=center-text>[(p⇒q)∧p]⇒q</p>
-                Mimo, że schematem jest prawo logiczne (modus ponendo ponens) to przesłanki są fałszywe, więc wniosek też. Wnioskowanie musi być pozbawione błędu materialnego.
-              
-              <br><br>
-              Przykład błędu formalnego:<br><br>
-              <table>
-                <tr>
-                  <td>P<sub>1</sub></td>
-                   <td>Jeżeli temperatura wynosi -10°C to woda zamarza</td>
-                </tr>
-                <tr>
-                  <td>P<sub>2</sub></td>
-                  <td>Woda zamarza</td>
-                 </tr>
-                <tr>
-                  <td><b>W</b></td>
-                  <td>Temperatura wynosi -10°C</td>
-                </tr>
-              </table>
-              <p class="center-text">[(p⇒q)∧q]⇒p</p>
-              Ten konkretny przykład błędu formalnego to schemat <i>wnioskowania redukcyjnego</i>. Jest on zawodny, ale mimo to jest on częściowo użyteczny i często używany. Pozwala on osiągnąć pewne prawdopodobieństwo, ale nie gwarantuje prawdy.
-              <hr>
-              <a name="tradycyjny-rachunek-nazw"></a>
-              <h2>Tradycyjny rachunek nazw</h2>
-                
-              Klasyczne zdanie kategoryczne ma jedną z 4 postaci:
-              <ol>
-                <li>
-                  Każde S jest P.
-                </li>
-                <li>
-                  Żadne S jest P.
-                </li>
-                <li>
-                  Niektóre S są P.
-                </li>
-                <li>
-                  Niektóre S nie są P.
-                </li>
-              </ol>
-              W miejsce S i P podstawiamy nazwy, ale obowiązują pewne ograniczenia. Muszą to być nazwy <u>generalne</u>, <u>niepuste</u> i <u>nie mogą to być nazwy uniwersalne</u>.<br>
-              W tradycyjnej terminologii nazwy nazywamy <i>terminami</i>.
-              <br><br>
-              Symbolicznie zapisujemy je w taki sposób:<br>
-              S a P - Każde S jest P - Zdania ogólnotwierdzące - Każdy kot jest ssakiem<br>
-              S e P - Żadne S nie jest P - Zdania ogólnoprzeczące P - Żaden kot nie jest psem<br>
-              S i P - Niektóre S są P - Zdania szczegółowotwierdzące - Niektórzy stutenci są kierowcami<br>
-              S o P - Niektóre S nie są P - Zdania szczegółowoprzeczące - Niektórzy studenci nie są kierowcami<br>
-              <br>
-              <table style="font-size: 14px;">
-                <tr>
-                  <td>S a P</td> <td>Każde S jest P</td><td>Każdy kot jest ssakiem</td><td>Zdania ogólnotwierdzące</td><td rowspan=2>Zdania ogólne</td>
-                </tr>
-                <tr>
-                  <td>S e P</td> <td>Żadne S nie jest P</td><td>Żaden kot nie jest psem</td><td>Zdania ogólnoprzeczące</td>
-                </tr>
-                <tr>
-                  <td>S i P</td> <td>Niektóre S są P</td><td>Niektórzy studenci są kierowcami</td><td>Zdania szczegółowotwierdzące</td><td rowspan=2>Zdania szczegółowe</td>
-                </tr>
-                <tr>
-                  <td>S o P</td><td>Niektóre S nie są P</td><td>Niektórzy studenci nie są kierowcami</td><td>Zdania szczegółowoprzeczące</td>
-                </tr>
-              </table>
-              <br>
-              Ilość zdania - ogólny czy szczegółowe<br>
-              Jakość zdania - twierdzące czy przeczące<br>
+      <table class="logic-table">
+        <tr class="logic header">
+          <td class="logic-cell">(</td>
+          <td class="logic-cell">p</td>
+          <td class="logic-cell">∧</td>
+          <td class="logic-cell">q</td>
+          <td class="logic-cell">)</td>
+          <td class="logic-cell">⇒</td>
+          <td class="logic-cell">q</td>
+        </tr>
+        <tr>
+          <td class="logic-cell"></td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">0</td>
+        </tr>
+      </table>
 
-              S a P ⇒ S i P
+      Sprzeczność - jest to tautologia<br />
+      Jest to prawo logiczne, więc zachodzi wynikanie logiczne.
 
-              <hr>
+      <hr />
 
-              <a name="prawa-kwadratu-logicznego"></a>
+      <a name="wnioskowanie-logiczne"></a>
+      <h2>Wnioskowanie logiczne</h2>
+      Wnioskowanie to układ zdań, w którym na podstawie zdań (co najmniej 1)
+      uznanych za prawdziwe uznaje się za prawdziwe jakieś inne zdanie. Zdania
+      na podstawie których uznaje się inne nazywa się <i>przesłankami</i>, a
+      zdanie uznane za prawdziwe na podstawie innych zdań to <i>wniosek</i>.
+      <br /><br />
+      <table>
+        <tr>
+          <td>P<sub>1</sub></td>
+          <td>Zdałam 1 egzamin w sesji.</td>
+        </tr>
+        <tr>
+          <td>P<sub>2</sub></td>
+          <td>Zdałam 2 egzamin w sesji.</td>
+        </tr>
+        <tr>
+          <td>...</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>P<sub>n</sub></td>
+          <td>Zdałam n-ty egzamin w sesji</td>
+        </tr>
+        <tr>
+          <td><b>W</b></td>
+          <td>Zdam każdy egzamin w sesji.</td>
+        </tr>
+      </table>
 
-              <h2>Prawa kwadratu logicznego</h2>
+      <br /><br />
+      <table>
+        <tr>
+          <td>P<sub>1</sub></td>
+          <td>Nieprawda, że temperatura jest ujemna</td>
+        </tr>
+        <tr>
+          <td>P<sub>2</sub></td>
+          <td>Nieprawda, że woda zamarza</td>
+        </tr>
+        <tr>
+          <td><b>W</b></td>
+          <td>Nieprawda, że woda zamarza w nieujemnej temperaturze.</td>
+        </tr>
+      </table>
 
-              <table style="text-align: center;">
-                  <tr>
-                    <td>S a P</td>
-                    <td>Przeciwieństwo</td>
-                    <td>S e P</td>
-                  </tr>
-                  <tr>
-                    <td>Podporządkowanie</td>
-                    <td><p class="center-text">Sprzeczność<br>
-                    <sub>(po przekątynch)</sub></p></td>
-                    <td>Podporządkowanie</td>
-                  </tr>
-                  <tr>
-                    <td>S i P</td>
-                    <td>Podprzeciwieństwo</td>
-                    <td>S o P</td>
-                  </tr>
-                </table>
-                <br>
+      <br /><br />
+      Wnioskowanie dedukcyjne występuje wtedy, gdy wniosek wynika logicznie z
+      przesłanek. Schematom wnioskowań dedukcyjnych odpowiadają prawa logiczne o
+      postaci implikacji. Schematowi wnioskowania o postaci takiej jak w
+      powyższych tabelach odpowiada formuła zdaniowa o postaci:<br />
+      <p class="center-text">
+        (P<sub>1</sub>∧P<sub>2</sub>∧ ... ∧P<sub>n</sub>)⇒W
+      </p>
+      Formułę zdaniową odpowiadającą danemu schematowi wnioskowania nazywamy
+      zasadą wnioskowania. Zasada wnioskowania to formuła zdaniowa odpowiadająca
+      schematowi wnioskowania. Wnioskowanie dedykcyjne cechuje się tym, że z
+      prawdziwych przesłanek zawsze uzyskamy prawdziwy wniosek.
+      <br /><br />
+      Przykład:<br /><br />
+      P<sub>1</sub>: Warszawa jest stolicą Polski<br />
+      P<sub>2</sub>: Jeżeli temperatura jest ujemna to woda zamarza.<br />
+      W: Woda zamarza.<br /><br />
+      <table class="logic-table">
+        <tr class="logic-header">
+          <td class="logic-cell">[</td>
+          <td class="logic-cell">p</td>
+          <td class="logic-cell">∧</td>
+          <td class="logic-cell">(</td>
+          <td class="logic-cell">q</td>
+          <td class="logic-cell">⇒</td>
+          <td class="logic-cell">r</td>
+          <td class="logic-cell">)</td>
+          <td class="logic-cell">]</td>
+          <td class="logic-cell">⇒</td>
+          <td class="logic-cell">r</td>
+        </tr>
+        <tr>
+          <td class="logic-cell"></td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">1</td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell"></td>
+          <td class="logic-cell">0</td>
+          <td class="logic-cell">0</td>
+        </tr>
+      </table>
 
+      Powyższy przykład nie jest wnioskowaniem logicznym, ponieważ jego zasada
+      wnioskowania nie jest prawem logicznym.<br /><br />
+      Błąd materialny występuje wtedy, gdy przesłanka wnioskowania (co najmniej
+      1) jest fałszywa.<br />
+      Błąd formalny polega na tym, że ktoś wnioskuje wedłuk schematu zawodnego,
+      niededukcyjnego, a uważa go za dedukcyjny.
+      <br /><br />
+      Przykład błędu materialnego:<br /><br />
+      <table>
+        <tr>
+          <td>P<sub>1</sub></td>
+          <td>Jeżeli temperatura wynosi +5°C to woda zamarza</td>
+        </tr>
+        <tr>
+          <td>P<sub>2</sub></td>
+          <td>Temperatura wynosi +5°C</td>
+        </tr>
+        <tr>
+          <td><b>W</b></td>
+          <td>Woda zamarza.</td>
+        </tr>
+      </table>
 
-              Prawa kwadratu logicznego ukazują zależności pomiędzy zdaniami kategorycznymi o tych samych podmiotach i tych samych orzecznikach.<br><br>
+      <p class="center-text">[(p⇒q)∧p]⇒q</p>
+      Mimo, że schematem jest prawo logiczne (modus ponendo ponens) to
+      przesłanki są fałszywe, więc wniosek też. Wnioskowanie musi być pozbawione
+      błędu materialnego.
 
-              S - Podmiot (łac. subiectum)<br>
-              P - Orzecznik (łac. predicatum)<br><br>
+      <br /><br />
+      Przykład błędu formalnego:<br /><br />
+      <table>
+        <tr>
+          <td>P<sub>1</sub></td>
+          <td>Jeżeli temperatura wynosi -10°C to woda zamarza</td>
+        </tr>
+        <tr>
+          <td>P<sub>2</sub></td>
+          <td>Woda zamarza</td>
+        </tr>
+        <tr>
+          <td><b>W</b></td>
+          <td>Temperatura wynosi -10°C</td>
+        </tr>
+      </table>
 
-              a, i - twierdzę (łac. affirmo)<br>
-              e, o - przeczę (łac. nego)<br><br>
+      <p class="center-text">[(p⇒q)∧q]⇒p</p>
+      Ten konkretny przykład błędu formalnego to schemat
+      <i>wnioskowania redukcyjnego</i>. Jest on zawodny, ale mimo to jest on
+      częściowo użyteczny i często używany. Pozwala on osiągnąć pewne
+      prawdopodobieństwo, ale nie gwarantuje prawdy.
+      <hr />
+      <a name="tradycyjny-rachunek-nazw"></a>
+      <h2>Tradycyjny rachunek nazw</h2>
 
-              Zdaniem podmiotowo-orzecznikowym jest zdanie:
+      Klasyczne zdanie kategoryczne ma jedną z 4 postaci:
+      <ol>
+        <li>
+          Każde S jest P.
+        </li>
+        <li>
+          Żadne S jest P.
+        </li>
+        <li>
+          Niektóre S są P.
+        </li>
+        <li>
+          Niektóre S nie są P.
+        </li>
+      </ol>
+      W miejsce S i P podstawiamy nazwy, ale obowiązują pewne ograniczenia.
+      Muszą to być nazwy <u>generalne</u>, <u>niepuste</u> i
+      <u>nie mogą to być nazwy uniwersalne</u>.<br />
+      W tradycyjnej terminologii nazwy nazywamy <i>terminami</i>. <br /><br />
+      Symbolicznie zapisujemy je w taki sposób:<br />
+      S a P - Każde S jest P - Zdania ogólnotwierdzące - Każdy kot jest
+      ssakiem<br />
+      S e P - Żadne S nie jest P - Zdania ogólnoprzeczące P - Żaden kot nie jest
+      psem<br />
+      S i P - Niektóre S są P - Zdania szczegółowotwierdzące - Niektórzy
+      stutenci są kierowcami<br />
+      S o P - Niektóre S nie są P - Zdania szczegółowoprzeczące - Niektórzy
+      studenci nie są kierowcami<br />
+      <br />
+      <table style="font-size: 14px;">
+        <tr>
+          <td>S a P</td>
+          <td>Każde S jest P</td>
+          <td>Każdy kot jest ssakiem</td>
+          <td>Zdania ogólnotwierdzące</td>
+          <td rowspan="2">Zdania ogólne</td>
+        </tr>
+        <tr>
+          <td>S e P</td>
+          <td>Żadne S nie jest P</td>
+          <td>Żaden kot nie jest psem</td>
+          <td>Zdania ogólnoprzeczące</td>
+        </tr>
+        <tr>
+          <td>S i P</td>
+          <td>Niektóre S są P</td>
+          <td>Niektórzy studenci są kierowcami</td>
+          <td>Zdania szczegółowotwierdzące</td>
+          <td rowspan="2">Zdania szczegółowe</td>
+        </tr>
+        <tr>
+          <td>S o P</td>
+          <td>Niektóre S nie są P</td>
+          <td>Niektórzy studenci nie są kierowcami</td>
+          <td>Zdania szczegółowoprzeczące</td>
+        </tr>
+      </table>
 
-              <p class=center-text>A jest B.</p>
-              <p class=center-text><u>Jan</u> jest <u>adwokatem</u>.</p>
+      <br />
+      Ilość zdania - ogólny czy szczegółowe<br />
+      Jakość zdania - twierdzące czy przeczące<br />
 
-              <h3>Przeciwieństwo</h3>
+      S a P ⇒ S i P
 
-              Zdania przeciwne mogą być oba prawdziwe, ale nie oba fałszywe.<br><br>
-              Jeżeli prawdą jest że każdy kot jest ssakiem, to prawdą jest też to, że <i>nieprawda, że żaden kot nie jest ssakiem</i>.<br>
-              <h3>Sprzeczność</h3>
-              Spośród zdań sprzecznych zawsze jedno jest prawdziwe a drugie fałszywe.
-              
-              <p class="center-text">
-                  S a P ≡ ~(S o P)<br>
-                  S e P ≡ ~(S i P)<br>
-                  S i P ≡ ~(S e P)<br>
-                  S o P ≡ ~(S a P)<br>
-                </p>
-              <h3>Podprzeciwieństwo</h3>
-              Dla zdań podprzeciwnych jest zależność odwrotna niż dla zdań przeciwnych. Nie mogą być oba fałszywe, ale mogą być oba prawdziwe.
-              <p class=center-text>
-                ~(S i P) ⇒ S o P<br>
-                ~(S o P) ⇒ S i P<br>
-              </p>
-              <h3>Podporządkowanie</h3>
-              Zdania szczegółowe są podporządkowane zdnaniom ogólnym w obrębie tej jakości zdania.
-              <p class=center-text>
-                S a P ⇒ S i P<br>
-                S e P ⇒ S o P
-              </p>
-              <hr>
-              <a name="diagramy-venna"></a>
-              <h2>Diagramy Venna</h2>
-              S a P - Nie istnieją S które nie są P<br>
-              S e P - Nie istnieją S które są P<br>
-              S i P - Istnieją takie S które równocześnie są P<br>
-              S o P - Istnieją takie S które równocześnie nie są P<br>
-              <br>
-              Dla praw kwadratu logicznego o postaci równoważności diagram pierwszego członu jest taki sam jak diagram drugiego członu.<br><br>
-              <p class="center-text">S a P ≡ ~(S o P)<br>
-              S i P ≡ ~(S e P)<br></p>
-              <br>
-              W przypadku prawa logicznego o postaci implikacji na podstawie diagramu poprzednika może być przyjęty diagram następnika przy dodatkowym założeniu o niepustości nazw (jeżeli zachodzi taka potrzeba).
-              <br><br>
-              <img class="center-text" src="img/diagram_venn.png">
-        </div>
+      <hr />
+
+      <a name="prawa-kwadratu-logicznego"></a>
+
+      <h2>Prawa kwadratu logicznego</h2>
+
+      <table style="text-align: center;">
+        <tr>
+          <td>S a P</td>
+          <td>Przeciwieństwo</td>
+          <td>S e P</td>
+        </tr>
+        <tr>
+          <td>Podporządkowanie</td>
+          <td>
+            <p class="center-text">
+              Sprzeczność<br />
+              <sub>(po przekątynch)</sub>
+            </p>
+          </td>
+          <td>Podporządkowanie</td>
+        </tr>
+        <tr>
+          <td>S i P</td>
+          <td>Podprzeciwieństwo</td>
+          <td>S o P</td>
+        </tr>
+      </table>
+
+      <br />
+
+      Prawa kwadratu logicznego ukazują zależności pomiędzy zdaniami
+      kategorycznymi o tych samych podmiotach i tych samych orzecznikach.<br /><br />
+
+      S - Podmiot (łac. subiectum)<br />
+      P - Orzecznik (łac. predicatum)<br /><br />
+
+      a, i - twierdzę (łac. affirmo)<br />
+      e, o - przeczę (łac. nego)<br /><br />
+
+      Zdaniem podmiotowo-orzecznikowym jest zdanie:
+
+      <p class="center-text">A jest B.</p>
+      <p class="center-text"><u>Jan</u> jest <u>adwokatem</u>.</p>
+
+      <h3>Przeciwieństwo</h3>
+
+      Zdania przeciwne mogą być oba prawdziwe, ale nie oba fałszywe.<br /><br />
+      Jeżeli prawdą jest że każdy kot jest ssakiem, to prawdą jest też to, że
+      <i>nieprawda, że żaden kot nie jest ssakiem</i>.<br />
+      <h3>Sprzeczność</h3>
+      Spośród zdań sprzecznych zawsze jedno jest prawdziwe a drugie fałszywe.
+
+      <p class="center-text">
+        S a P ≡ ~(S o P)<br />
+        S e P ≡ ~(S i P)<br />
+        S i P ≡ ~(S e P)<br />
+        S o P ≡ ~(S a P)<br />
+      </p>
+      <h3>Podprzeciwieństwo</h3>
+      Dla zdań podprzeciwnych jest zależność odwrotna niż dla zdań przeciwnych.
+      Nie mogą być oba fałszywe, ale mogą być oba prawdziwe.
+      <p class="center-text">
+        ~(S i P) ⇒ S o P<br />
+        ~(S o P) ⇒ S i P<br />
+      </p>
+      <h3>Podporządkowanie</h3>
+      Zdania szczegółowe są podporządkowane zdnaniom ogólnym w obrębie tej
+      jakości zdania.
+      <p class="center-text">
+        S a P ⇒ S i P<br />
+        S e P ⇒ S o P
+      </p>
+      <hr />
+      <a name="diagramy-venna"></a>
+      <h2>Diagramy Venna</h2>
+      S a P - Nie istnieją S które nie są P<br />
+      S e P - Nie istnieją S które są P<br />
+      S i P - Istnieją takie S które równocześnie są P<br />
+      S o P - Istnieją takie S które równocześnie nie są P<br />
+      <br />
+      Dla praw kwadratu logicznego o postaci równoważności diagram pierwszego
+      członu jest taki sam jak diagram drugiego członu.<br /><br />
+      <p class="center-text">
+        S a P ≡ ~(S o P)<br />
+        S i P ≡ ~(S e P)<br />
+      </p>
+
+      <br />
+      W przypadku prawa logicznego o postaci implikacji na podstawie diagramu
+      poprzednika może być przyjęty diagram następnika przy dodatkowym założeniu
+      o niepustości nazw (jeżeli zachodzi taka potrzeba).
+      <br /><br />
+      <img class="center-text" src="img/diagram_venn.png" />
     </div>
+  </div>
 </body>
