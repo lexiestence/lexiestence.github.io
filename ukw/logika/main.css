@@ -115,14 +115,12 @@ td{
     font-weight: bold;
 }
 
-.striped-bg{background: linear-gradient(
+.striped{background: linear-gradient(
     to bottom,
     #fff,
     #fff 50%,
     #000 50%,
     #000
   );
-  /* The rectangle in which to repeat. 
-     It can be fully wide in this case */
-  background-size: 100% 5px;
+  background-size: 100% 4px;
 }
