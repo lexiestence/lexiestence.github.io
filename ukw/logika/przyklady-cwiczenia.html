@@ -1,0 +1,45 @@
+<head>
+    <title>Logika formalna</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="main.css" />
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" />
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png" />
+  </head>
+<body>
+  <div id="titlebar">
+        Logika formalna
+      </div>
+    <div id="container">
+      
+      <div id="content">  
+
+        <h3>Metoda skrócona</h3>
+
+        <p class="center-text">[(p Λ ~q) ∨ (p Λ q)] ⇒ p</p>
+        <p class="center-text">(p Λ q) ⇒ [(r / q ) ∨ p]</p>
+        <p class="center-text">(q / p) ⇒ (q Λ r)</p>
+
+        <hr>
+        <h3>Wynikanie logiczne</h3>
+
+        <p>
+          Z1: Warszawa jest stolicą Polski i Polska jest największym krajem świata.<br>
+          Z2: jeżeli Polska jest największym krajem świata to nie prawda, że Warszawa jest stolicą Polski.<br>
+          Z3: Warszawa jest stolicą Polski lub Polska jest największym krajem świata
+        </p>
+
+        <p>
+          p - Warszawa jest stolicą Polski<br>
+          q - Polska jest największym krajem świata
+        </p>
+
+        <p>
+          Z1 - p Λ q<br>
+          Z2 - q ⇒ ~p<br>
+          Z3 - p ∨ q
+        </p>
+        
+        <p class="center-text">[(p Λ q) Λ (q ⇒ ~p)] ⇒ (p ∨ q)</p>
+      </div>
+    </div>
+</body>  
