@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/graph.js"></script>
+</head>
+
+<body onload="drawGraph()">
+    <div id="wrapper">
+        <canvas width="500" height="500" id="graph"></canvas>
+        <table>
+            <tr>
+                <td><input oninput="drawGraph()" id="scaleX" type="range" min="-250" max="250" value="20"></td>
+                <td><span id="outX"></span></td>
+            </tr>
+            <tr>
+                <td><input oninput="drawGraph()" id="scaleY" type="range" min="-250" max="250" value="20"></td>
+                <td><span id="outY"></span></td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

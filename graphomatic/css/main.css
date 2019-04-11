@@ -1,0 +1,22 @@
+#graph{
+    border: solid 1px black;
+}
+#wrapper{
+    border: solid 1px black;
+    padding: 10px;
+    text-align: center;
+    width: 500px;
+    margin: auto;
+}
+input{
+    width: 350px;
+}
+table{
+    border: solid 1px black;
+    width: 500px;
+    margin: auto;
+}
+td{
+    min-width: 100px;
+    border: solid 1px black;
+}
