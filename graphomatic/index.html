@@ -9,14 +9,27 @@
 <body onload="drawGraph()">
     <div id="wrapper">
         <canvas width="500" height="500" id="graph"></canvas>
+        
         <table>
             <tr>
+                <td>Scale X</td>
                 <td><input oninput="drawGraph()" id="scaleX" type="range" min="-250" max="250" value="20"></td>
                 <td><span id="outX"></span></td>
             </tr>
             <tr>
+                <td>Scale Y</td>
                 <td><input oninput="drawGraph()" id="scaleY" type="range" min="-250" max="250" value="20"></td>
                 <td><span id="outY"></span></td>
+            </tr>
+            <tr>
+                <td>Pan X</td>
+                <td><input oninput="drawGraph()" id="panX" type="range" min="-250" max="250" value="0"></td>
+                <td><span id="outPanX"></span></td>
+            </tr>
+            <tr>
+                <td>Pan Y</td>
+                <td><input oninput="drawGraph()" id="panY" type="range" min="-250" max="250" value="0"></td>
+                <td><span id="outPanY"></span></td>
             </tr>
         </table>
     </div>
