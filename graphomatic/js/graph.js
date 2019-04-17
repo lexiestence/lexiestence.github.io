@@ -24,7 +24,7 @@ function drawGraph() {
         while (x <= width / 2) {
             y = (-Math.sin((x + panX) / scaleX) * scaleY)+panY;
             ctx.lineTo(x + width / 2, y + height / 2);
-            x++
+            x++;
         }
         ctx.stroke();
     }
@@ -38,7 +38,7 @@ function drawGraph() {
         while (x <= width / 2) {
             y = (-Math.cos((x + panX) / scaleX) * scaleY)+panY;
             ctx.lineTo(x + width / 2, y + height / 2);
-            x++
+            x++;
         }
         ctx.stroke();
     }
@@ -66,3 +66,6 @@ function drawGraph() {
         drawCosine();
     }
 }
+
+
+
