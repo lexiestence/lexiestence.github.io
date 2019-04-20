@@ -1,6 +1,9 @@
 var equationInitRegex = /^y=/;
 var parenthesisRegex = /\(.*\)/;
+var multiplicationRegex = /[0-9]x/;
 
+var parenthesisArray = [];
+var multiplication = [];
 
 function drawGraph(){
 
@@ -13,6 +16,15 @@ function drawGraph(){
     catch(e){
         displayError(e);
     }
+
+    input = input.replace(equationInitRegex, "");
+    
+    while(parenthesisRegex.exec(input)){
+        parenthesisArray.push(parenthesisRegex.exec(input));
+        input = input.replace(parenthesisRegex, "");
+    }
+
+    displayError(parenthesisArray);
 
     function displayError(e){
         output.innerHTML = e;
