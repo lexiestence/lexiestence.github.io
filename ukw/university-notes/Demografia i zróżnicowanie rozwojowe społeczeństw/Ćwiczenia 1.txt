@@ -9,6 +9,8 @@ Przygotować:
     Liczba ludności świata w epokach
     Liczby ludności województw i 20 największych miast w polsce
 
+----    ----    województwa ----    ----
+
 1	mazowieckie	            5 349 114	 
 2	śląskie	                4 570 849	 
 3	wielkopolskie	        3 475 323	 
@@ -26,6 +28,8 @@ Przygotować:
 15	lubuskie	            1 018 075	 
 16	opolskie	            996 011	 
 
+----    ----    miasta      ----    ----
+
 1	Warszawa	            1 783 321
 2	Kraków	                774 839
 3	Łódź	                682 679
@@ -36,6 +40,26 @@ Przygotować:
 8	Bydgoszcz	            349 021
 9	Lublin	                339 770
 10	Białystok	            297 356
+11  Katowice                290 533
+12  Gdynia                  224 969
+13  Częstochowa             217 530
+14  Radom                   209 296
+15  Toruń                   198 613
+16  Sosnowiec               197 586
+17  Rzeszów                 196 638
+18  Kielce                  193 415
+19  Gliwice                 177 049
+20  Olsztyn                 171 249
+
+737   < 20k
+109   20-40k
+37    40-60k
+27    60-80k
+7     80-00k
+8     100-120k
+29    > 120k
+
+----    ----    państwa     ----    ----
 
 1	Russia	                145 934 462
 2	Germany	                83 783 942
