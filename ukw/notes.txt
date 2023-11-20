@@ -5,4 +5,6 @@ Physical security vulnerabilities
 Story time
 Impersonation
 Solutions:
-    -pay people better!!    
+    -pay people better!!
+    -build in safe and proper ways
+    -ENCRYPT YOUR FUCKING DATA
